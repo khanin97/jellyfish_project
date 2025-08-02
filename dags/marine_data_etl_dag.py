@@ -33,6 +33,9 @@ from load_phytoplankton_to_duckdb import load_phytoplankton_csv_to_duckdb
 from download_so import download_salinity as download_so
 from convert_so import convert_salinity_nc_to_csv as convert_so_nc_to_csv
 from load_so_to_duckdb import load_salinity_csv_to_duckdb as load_so_csv_to_duckdb
+
+from debug_env import debug_env
+
 # =================================
 
 with DAG(
@@ -45,6 +48,8 @@ with DAG(
 
     start = EmptyOperator(task_id="start")
     end = EmptyOperator(task_id="end")
+
+    debug_task = PythonOperator(task_id="debug_env", python_callable=debug_env)
 
     with TaskGroup("sst_etl") as sst_group:
         t1 = PythonOperator(task_id="download_sst", python_callable=download_sst)
@@ -82,5 +87,5 @@ with DAG(
         t3 = PythonOperator(task_id="load_so", python_callable=load_so_csv_to_duckdb)
         t1 >> t2 >> t3
 
-    # DAG flow
-    start >> [sst_group, thetao_group, zoo_group, current_group, phyto_group, so_group] >> end
+    # DAG Flow
+    start >> debug_task >> [sst_group, thetao_group, zoo_group, current_group, phyto_group, so_group] >> end

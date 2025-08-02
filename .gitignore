@@ -1,1 +1,3 @@
 # Git ignore rules
+# Ignore Airflow log files
+logs/
