@@ -3,7 +3,7 @@ import xarray as xr
 import pandas as pd
 
 def convert_sst_nc_to_csv():
-    folder = "csv/sst"
+    folder = "/opt/airflow/csv/sst"
     for fname in os.listdir(folder):
         if fname.endswith(".nc"):
             path = os.path.join(folder, fname)

@@ -3,7 +3,7 @@ import xarray as xr
 import pandas as pd
 
 def convert_thetao_nc_to_csv():
-    folder = "csv/thetao"
+    folder = "/opt/airflow/csv/thetao"
     for fname in os.listdir(folder):
         if fname.endswith(".nc"):
             path = os.path.join(folder, fname)

@@ -3,7 +3,7 @@ from datetime import datetime
 import os
 
 def download_current():
-    output_dir = "csv/current"
+    output_dir = "/opt/airflow/csv/current"
     os.makedirs(output_dir, exist_ok=True)
 
     provinces = {

@@ -27,6 +27,8 @@ services:
       - ./logs:/opt/airflow/logs
       - ./plugins:/opt/airflow/plugins
       - ./requirements.txt:/requirements.txt
+      - ./csv:/opt/airflow/csv         # ✅ เพิ่ม csv mount
+      - ./db:/opt/airflow/db           # ✅ เพิ่ม db mount
     ports:
       - "8080:8080"
     command: bash -c "pip install -r /requirements.txt && airflow webserver"
@@ -49,6 +51,8 @@ services:
       - ./logs:/opt/airflow/logs
       - ./plugins:/opt/airflow/plugins
       - ./requirements.txt:/requirements.txt
+      - ./csv:/opt/airflow/csv         # ✅ เพิ่ม csv mount
+      - ./db:/opt/airflow/db           # ✅ เพิ่ม db mount
     command: bash -c "pip install -r /requirements.txt && airflow scheduler"
     networks:
       - airflow
@@ -67,6 +71,8 @@ services:
       - ./dags:/opt/airflow/dags
       - ./logs:/opt/airflow/logs
       - ./plugins:/opt/airflow/plugins
+      - ./csv:/opt/airflow/csv         # ✅ เพิ่ม csv mount
+      - ./db:/opt/airflow/db           # ✅ เพิ่ม db mount
     entrypoint: >
       bash -c "airflow db migrate &&
                airflow users create --username admin --password admin --firstname admin --lastname admin --role Admin --email admin@example.com"

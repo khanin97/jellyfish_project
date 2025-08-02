@@ -3,7 +3,7 @@ from datetime import datetime
 import os
 
 def download_phytoplankton():
-    output_dir = "csv/phytoplankton"
+    output_dir = "/opt/airflow/csv/phytoplankton"
     os.makedirs(output_dir, exist_ok=True)
 
     provinces = {

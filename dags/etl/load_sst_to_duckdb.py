@@ -2,7 +2,7 @@ import os
 import duckdb
 
 def load_sst_csv_to_duckdb():
-    db_path = "db/jellyfish.duckdb"
+    db_path = "/opt/airflow/db/jellyfish.duckdb"
     os.makedirs("db", exist_ok=True)
     con = duckdb.connect(db_path)
 

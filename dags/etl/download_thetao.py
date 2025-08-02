@@ -3,7 +3,7 @@ from datetime import datetime
 import os
 
 def download_thetao():
-    output_dir = "csv/thetao"
+    output_dir = "/opt/airflow/csv/thetao"
     os.makedirs(output_dir, exist_ok=True)
 
     provinces = {
