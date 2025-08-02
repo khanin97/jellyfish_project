@@ -86,3 +86,10 @@
 [2025-08-02T12:04:36.637+0000] {logging_mixin.py:188} INFO - [2025-08-02T12:04:36.633+0000] {dag.py:3036} INFO - Sync 1 DAGs
 [2025-08-02T12:04:36.668+0000] {logging_mixin.py:188} INFO - [2025-08-02T12:04:36.667+0000] {dag.py:3823} INFO - Setting next_dagrun for marine_data_etl_dag to 2025-07-27 00:00:00+00:00, run_after=2025-08-03 00:00:00+00:00
 [2025-08-02T12:04:36.698+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/marine_data_etl_dag.py took 2.056 seconds
+[2025-08-02T12:08:26.614+0000] {processor.py:161} INFO - Started process (PID=167) to work on /opt/airflow/dags/marine_data_etl_dag.py
+[2025-08-02T12:08:26.615+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/marine_data_etl_dag.py for tasks to queue
+[2025-08-02T12:08:26.617+0000] {logging_mixin.py:188} INFO - [2025-08-02T12:08:26.616+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/marine_data_etl_dag.py
+[2025-08-02T12:08:28.338+0000] {processor.py:840} INFO - DAG(s) 'marine_data_etl_dag' retrieved from /opt/airflow/dags/marine_data_etl_dag.py
+[2025-08-02T12:08:28.389+0000] {logging_mixin.py:188} INFO - [2025-08-02T12:08:28.388+0000] {dag.py:3036} INFO - Sync 1 DAGs
+[2025-08-02T12:08:28.431+0000] {logging_mixin.py:188} INFO - [2025-08-02T12:08:28.431+0000] {dag.py:3823} INFO - Setting next_dagrun for marine_data_etl_dag to 2025-07-27 00:00:00+00:00, run_after=2025-08-03 00:00:00+00:00
+[2025-08-02T12:08:28.464+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/marine_data_etl_dag.py took 1.860 seconds
