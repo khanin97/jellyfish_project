@@ -24,10 +24,10 @@ services:
       - ./dags:/opt/airflow/dags
       - ./logs:/opt/airflow/logs
       - ./plugins:/opt/airflow/plugins
-      - ./requirements.txt:/requirements.txt   # ✅ เพิ่มบรรทัดนี้
+      - ./requirements.txt:/requirements.txt
     ports:
       - "8080:8080"
-    command: bash -c "pip install -r /requirements.txt && airflow webserver"  # ✅ แก้ command
+    command: bash -c "pip install -r /requirements.txt && airflow webserver"  
     networks:
       - airflow
 
@@ -45,7 +45,7 @@ services:
       - ./dags:/opt/airflow/dags
       - ./logs:/opt/airflow/logs
       - ./plugins:/opt/airflow/plugins
-      - ./requirements.txt:/requirements.txt   # ✅ เพิ่มบรรทัดนี้
+      - ./requirements.txt:/requirements.txt
     command: bash -c "pip install -r /requirements.txt && airflow scheduler"  # ✅ แก้ command
     networks:
       - airflow
