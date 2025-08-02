@@ -30,9 +30,9 @@ from download_phytoplankton import download_phytoplankton
 from convert_phytoplankton import convert_phytoplankton_nc_to_csv
 from load_phytoplankton_to_duckdb import load_phytoplankton_csv_to_duckdb
 
-from download_so import download_so
-from convert_so import convert_so_nc_to_csv
-from load_so_to_duckdb import load_so_csv_to_duckdb
+from download_so import download_salinity as download_so
+from convert_so import convert_salinity_nc_to_csv as convert_so_nc_to_csv
+from load_so_to_duckdb import load_salinity_csv_to_duckdb as load_so_csv_to_duckdb
 # =================================
 
 with DAG(
