@@ -20,6 +20,7 @@ services:
         CMEMS_USERNAME: ${CMEMS_USERNAME}
         CMEMS_PASSWORD: ${CMEMS_PASSWORD}
     volumes:
+      - ./airflow:/opt/airflow
       - ./dags:/opt/airflow/dags
       - ./logs:/opt/airflow/logs
       - ./plugins:/opt/airflow/plugins
@@ -40,6 +41,7 @@ services:
         CMEMS_USERNAME: ${CMEMS_USERNAME}
         CMEMS_PASSWORD: ${CMEMS_PASSWORD}
     volumes:
+      - ./airflow:/opt/airflow
       - ./dags:/opt/airflow/dags
       - ./logs:/opt/airflow/logs
       - ./plugins:/opt/airflow/plugins
