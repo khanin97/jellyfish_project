@@ -2,3 +2,4 @@ copernicusmarine
 duckdb
 pandas
 netCDF4
+xarray

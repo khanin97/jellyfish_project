@@ -17,8 +17,10 @@ services:
     depends_on:
       - postgres
     environment:
-        CMEMS_USERNAME: ${CMEMS_USERNAME}
-        CMEMS_PASSWORD: ${CMEMS_PASSWORD}
+      CMEMS_USERNAME: ${CMEMS_USERNAME}
+      CMEMS_PASSWORD: ${CMEMS_PASSWORD}
+      AIRFLOW__DATABASE__SQL_ALCHEMY_CONN: postgresql+psycopg2://airflow:airflow@postgres/airflow
+      AIRFLOW__CORE__LOAD_EXAMPLES: "false"
     volumes:
       - ./airflow:/opt/airflow
       - ./dags:/opt/airflow/dags
@@ -27,10 +29,9 @@ services:
       - ./requirements.txt:/requirements.txt
     ports:
       - "8080:8080"
-    command: bash -c "pip install -r /requirements.txt && airflow webserver"  
+    command: bash -c "pip install -r /requirements.txt && airflow webserver"
     networks:
       - airflow
-
 
   scheduler:
     image: apache/airflow:2.8.1-python3.10
@@ -38,18 +39,39 @@ services:
     depends_on:
       - webserver
     environment:
-        CMEMS_USERNAME: ${CMEMS_USERNAME}
-        CMEMS_PASSWORD: ${CMEMS_PASSWORD}
+      CMEMS_USERNAME: ${CMEMS_USERNAME}
+      CMEMS_PASSWORD: ${CMEMS_PASSWORD}
+      AIRFLOW__DATABASE__SQL_ALCHEMY_CONN: postgresql+psycopg2://airflow:airflow@postgres/airflow
+      AIRFLOW__CORE__LOAD_EXAMPLES: "false"
     volumes:
       - ./airflow:/opt/airflow
       - ./dags:/opt/airflow/dags
       - ./logs:/opt/airflow/logs
       - ./plugins:/opt/airflow/plugins
       - ./requirements.txt:/requirements.txt
-    command: bash -c "pip install -r /requirements.txt && airflow scheduler"  # ✅ แก้ command
+    command: bash -c "pip install -r /requirements.txt && airflow scheduler"
     networks:
       - airflow
 
+  airflow-init:
+    image: apache/airflow:2.8.1-python3.10
+    depends_on:
+      - postgres
+    environment:
+      CMEMS_USERNAME: ${CMEMS_USERNAME}
+      CMEMS_PASSWORD: ${CMEMS_PASSWORD}
+      AIRFLOW__DATABASE__SQL_ALCHEMY_CONN: postgresql+psycopg2://airflow:airflow@postgres/airflow
+      AIRFLOW__CORE__LOAD_EXAMPLES: "false"
+    volumes:
+      - ./airflow:/opt/airflow
+      - ./dags:/opt/airflow/dags
+      - ./logs:/opt/airflow/logs
+      - ./plugins:/opt/airflow/plugins
+    entrypoint: >
+      bash -c "airflow db migrate &&
+               airflow users create --username admin --password admin --firstname admin --lastname admin --role Admin --email admin@example.com"
+    networks:
+      - airflow
 
 volumes:
   postgres-db-volume:
