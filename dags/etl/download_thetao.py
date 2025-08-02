@@ -3,7 +3,7 @@ from datetime import datetime
 import os
 
 def download_thetao():
-    output_dir = "/opt/airflow/csv/thetao"
+    output_dir = "/opt/airflow/nc/thetao"
     os.makedirs(output_dir, exist_ok=True)
 
     provinces = {
@@ -15,7 +15,8 @@ def download_thetao():
 
     start_date = "2022-06-01T00:00:00"
     end_date = datetime.today().strftime("%Y-%m-%dT00:00:00")
-    dataset_id = "cmems_mod_glo_phy-thetao_anfc_0.25deg_P1D-m"
+
+    dataset_id = "cmems_mod_glo_phy_anfc_0.083deg_P1D-m"
     variable = "thetao"
 
     for province, bounds in provinces.items():

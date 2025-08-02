@@ -3,7 +3,7 @@ from datetime import datetime
 import os
 
 def download_sst():
-    output_dir = "/opt/airflow/csv/sst"
+    output_dir = "/opt/airflow/nc/sst"
     os.makedirs(output_dir, exist_ok=True)
 
     provinces = {
@@ -15,7 +15,8 @@ def download_sst():
 
     start_date = "2022-06-01T00:00:00"
     end_date = datetime.today().strftime("%Y-%m-%dT00:00:00")
-    dataset_id = "cmems_mod_glo_phy_sst_anfc_0.25deg_P1D-m"
+
+    dataset_id = "cmems_mod_glo_phy-ssh_anfc_0.083deg_P1D-m"
     variable = "sst"
 
     for province, bounds in provinces.items():

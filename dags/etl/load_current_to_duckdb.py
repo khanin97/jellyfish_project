@@ -3,10 +3,10 @@ import duckdb
 
 def load_current_csv_to_duckdb():
     db_path = "/opt/airflow/db/jellyfish.duckdb"
-    os.makedirs("db", exist_ok=True)
+    os.makedirs("/opt/airflow/db", exist_ok=True)
     con = duckdb.connect(db_path)
 
-    folder = "csv/current"
+    folder = "/opt/airflow/csv/current"
     for fname in os.listdir(folder):
         if fname.endswith(".csv"):
             path = os.path.join(folder, fname)

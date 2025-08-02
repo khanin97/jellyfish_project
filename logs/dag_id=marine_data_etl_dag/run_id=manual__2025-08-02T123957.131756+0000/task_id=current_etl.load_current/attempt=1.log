@@ -1,0 +1,13 @@
+[2025-08-02T12:42:19.335+0000] {taskinstance.py:1956} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: marine_data_etl_dag.current_etl.load_current manual__2025-08-02T12:39:57.131756+00:00 [queued]>
+[2025-08-02T12:42:19.353+0000] {taskinstance.py:1956} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: marine_data_etl_dag.current_etl.load_current manual__2025-08-02T12:39:57.131756+00:00 [queued]>
+[2025-08-02T12:42:19.353+0000] {taskinstance.py:2170} INFO - Starting attempt 1 of 1
+[2025-08-02T12:42:19.378+0000] {taskinstance.py:2191} INFO - Executing <Task(PythonOperator): current_etl.load_current> on 2025-08-02 12:39:57.131756+00:00
+[2025-08-02T12:42:19.386+0000] {standard_task_runner.py:60} INFO - Started process 174 to run task
+[2025-08-02T12:42:19.393+0000] {standard_task_runner.py:87} INFO - Running: ['***', 'tasks', 'run', 'marine_data_etl_dag', 'current_etl.load_current', 'manual__2025-08-02T12:39:57.131756+00:00', '--job-id', '55', '--raw', '--subdir', 'DAGS_FOLDER/marine_data_etl_dag.py', '--cfg-path', '/tmp/tmp0mx1dzp0']
+[2025-08-02T12:42:19.399+0000] {standard_task_runner.py:88} INFO - Job 55: Subtask current_etl.load_current
+[2025-08-02T12:42:19.473+0000] {task_command.py:423} INFO - Running <TaskInstance: marine_data_etl_dag.current_etl.load_current manual__2025-08-02T12:39:57.131756+00:00 [running]> on host a9f0d3f8f863
+[2025-08-02T12:42:19.778+0000] {taskinstance.py:2480} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='marine_data_etl_dag' AIRFLOW_CTX_TASK_ID='current_etl.load_current' AIRFLOW_CTX_EXECUTION_DATE='2025-08-02T12:39:57.131756+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2025-08-02T12:39:57.131756+00:00'
+[2025-08-02T12:42:19.829+0000] {python.py:201} INFO - Done. Returned value was: None
+[2025-08-02T12:42:19.850+0000] {taskinstance.py:1138} INFO - Marking task as SUCCESS. dag_id=marine_data_etl_dag, task_id=current_etl.load_current, execution_date=20250802T123957, start_date=20250802T124219, end_date=20250802T124219
+[2025-08-02T12:42:19.927+0000] {local_task_job_runner.py:234} INFO - Task exited with return code 0
+[2025-08-02T12:42:19.970+0000] {taskinstance.py:3280} INFO - 0 downstream tasks scheduled from follow-on schedule check

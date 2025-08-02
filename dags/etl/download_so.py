@@ -2,8 +2,8 @@ from copernicusmarine import subset
 from datetime import datetime
 import os
 
-def download_so():
-    output_dir = "/opt/airflow/csv/so"
+def download_salinity():
+    output_dir = "/opt/airflow/nc/salinity"
     os.makedirs(output_dir, exist_ok=True)
 
     provinces = {
@@ -15,11 +15,12 @@ def download_so():
 
     start_date = "2022-06-01T00:00:00"
     end_date = datetime.today().strftime("%Y-%m-%dT00:00:00")
-    dataset_id = "cmems_mod_glo_bgc-sal_anfc_0.25deg_P1D-m"
+
+    dataset_id = "cmems_mod_glo_phy_anfc_0.083deg_P1D-m"
     variable = "so"
 
     for province, bounds in provinces.items():
-        output_file = os.path.join(output_dir, f"{province}_so.nc")
+        output_file = os.path.join(output_dir, f"{province}_salinity.nc")
         subset(
             dataset_id=dataset_id,
             variables=[variable],
@@ -32,4 +33,4 @@ def download_so():
             output_filename=output_file,
             force_download=True
         )
-        print(f"✅ Downloaded SO: {output_file}")
+        print(f"✅ Downloaded salinity: {output_file}")

@@ -3,8 +3,8 @@ from datetime import datetime
 import os
 
 def download_zooplankton():
-    output_dir = "/opt/airflow/csv/zooplankton"
-    os.makedirs(output_dir, exist_ok=True)
+    output_dir = "/opt/airflow/nc/zooplankton"
+    os.makedirs(output_dir, exist_ok=True)  # เปลี่ยนเป็น nc/
 
     provinces = {
         'rayong_1': dict(lat=slice(12.4723, 12.5566), lon=slice(100.8553, 101.4210)),

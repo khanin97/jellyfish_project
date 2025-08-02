@@ -3,7 +3,7 @@ from datetime import datetime
 import os
 
 def download_phytoplankton():
-    output_dir = "/opt/airflow/csv/phytoplankton"
+    output_dir = "/opt/airflow/nc/phytoplankton"
     os.makedirs(output_dir, exist_ok=True)
 
     provinces = {
@@ -15,6 +15,7 @@ def download_phytoplankton():
 
     start_date = "2022-06-01T00:00:00"
     end_date = datetime.today().strftime("%Y-%m-%dT00:00:00")
+
     dataset_id = "cmems_mod_glo_bgc-plankton_anfc_0.25deg_P1D-m"
     variable = "phyc"
 
