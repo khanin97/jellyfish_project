@@ -1,0 +1,37 @@
+[2025-08-02T12:21:06.523+0000] {taskinstance.py:1956} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: marine_data_etl_dag.zooplankton_etl.download_zoo manual__2025-08-02T12:20:35.691377+00:00 [queued]>
+[2025-08-02T12:21:06.538+0000] {taskinstance.py:1956} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: marine_data_etl_dag.zooplankton_etl.download_zoo manual__2025-08-02T12:20:35.691377+00:00 [queued]>
+[2025-08-02T12:21:06.539+0000] {taskinstance.py:2170} INFO - Starting attempt 1 of 1
+[2025-08-02T12:21:06.563+0000] {taskinstance.py:2191} INFO - Executing <Task(PythonOperator): zooplankton_etl.download_zoo> on 2025-08-02 12:20:35.691377+00:00
+[2025-08-02T12:21:06.569+0000] {standard_task_runner.py:60} INFO - Started process 84 to run task
+[2025-08-02T12:21:06.576+0000] {standard_task_runner.py:87} INFO - Running: ['***', 'tasks', 'run', 'marine_data_etl_dag', 'zooplankton_etl.download_zoo', 'manual__2025-08-02T12:20:35.691377+00:00', '--job-id', '23', '--raw', '--subdir', 'DAGS_FOLDER/marine_data_etl_dag.py', '--cfg-path', '/tmp/tmp2n5pb_l4']
+[2025-08-02T12:21:06.581+0000] {standard_task_runner.py:88} INFO - Job 23: Subtask zooplankton_etl.download_zoo
+[2025-08-02T12:21:06.666+0000] {task_command.py:423} INFO - Running <TaskInstance: marine_data_etl_dag.zooplankton_etl.download_zoo manual__2025-08-02T12:20:35.691377+00:00 [running]> on host c4cf8a44ca97
+[2025-08-02T12:21:07.016+0000] {taskinstance.py:2480} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='marine_data_etl_dag' AIRFLOW_CTX_TASK_ID='zooplankton_etl.download_zoo' AIRFLOW_CTX_EXECUTION_DATE='2025-08-02T12:20:35.691377+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2025-08-02T12:20:35.691377+00:00'
+[2025-08-02T12:21:07.022+0000] {deprecated_options.py:61} WARNING - 'force_download' has been deprecated.
+[2025-08-02T12:21:07.798+0000] {credentials_utils.py:181} INFO - Downloading Copernicus Marine data requires a Copernicus Marine username and password, sign up for free at: https://data.marine.copernicus.eu/register
+[2025-08-02T12:21:07.804+0000] {logging_mixin.py:188} INFO - Copernicus Marine username:
+[2025-08-02T12:21:07.805+0000] {logging_mixin.py:188} INFO -  
+[2025-08-02T12:21:07.806+0000] {logging_mixin.py:188} INFO - Abort
+[2025-08-02T12:21:07.807+0000] {logging_mixin.py:188} INFO - ✅ Downloaded zooplankton: /opt/***/csv/zooplankton/rayong_1_zooplankton.nc
+[2025-08-02T12:21:07.809+0000] {deprecated_options.py:61} WARNING - 'force_download' has been deprecated.
+[2025-08-02T12:21:08.483+0000] {credentials_utils.py:181} INFO - Downloading Copernicus Marine data requires a Copernicus Marine username and password, sign up for free at: https://data.marine.copernicus.eu/register
+[2025-08-02T12:21:08.484+0000] {logging_mixin.py:188} INFO - Copernicus Marine username:
+[2025-08-02T12:21:08.485+0000] {logging_mixin.py:188} INFO -  
+[2025-08-02T12:21:08.486+0000] {logging_mixin.py:188} INFO - Abort
+[2025-08-02T12:21:08.487+0000] {logging_mixin.py:188} INFO - ✅ Downloaded zooplankton: /opt/***/csv/zooplankton/rayong_2_zooplankton.nc
+[2025-08-02T12:21:08.488+0000] {deprecated_options.py:61} WARNING - 'force_download' has been deprecated.
+[2025-08-02T12:21:09.156+0000] {credentials_utils.py:181} INFO - Downloading Copernicus Marine data requires a Copernicus Marine username and password, sign up for free at: https://data.marine.copernicus.eu/register
+[2025-08-02T12:21:09.157+0000] {logging_mixin.py:188} INFO - Copernicus Marine username:
+[2025-08-02T12:21:09.158+0000] {logging_mixin.py:188} INFO -  
+[2025-08-02T12:21:09.159+0000] {logging_mixin.py:188} INFO - Abort
+[2025-08-02T12:21:09.161+0000] {logging_mixin.py:188} INFO - ✅ Downloaded zooplankton: /opt/***/csv/zooplankton/chanthaburi_1_zooplankton.nc
+[2025-08-02T12:21:09.162+0000] {deprecated_options.py:61} WARNING - 'force_download' has been deprecated.
+[2025-08-02T12:21:09.815+0000] {credentials_utils.py:181} INFO - Downloading Copernicus Marine data requires a Copernicus Marine username and password, sign up for free at: https://data.marine.copernicus.eu/register
+[2025-08-02T12:21:09.816+0000] {logging_mixin.py:188} INFO - Copernicus Marine username:
+[2025-08-02T12:21:09.817+0000] {logging_mixin.py:188} INFO -  
+[2025-08-02T12:21:09.818+0000] {logging_mixin.py:188} INFO - Abort
+[2025-08-02T12:21:09.819+0000] {logging_mixin.py:188} INFO - ✅ Downloaded zooplankton: /opt/***/csv/zooplankton/trat_1_zooplankton.nc
+[2025-08-02T12:21:09.820+0000] {python.py:201} INFO - Done. Returned value was: None
+[2025-08-02T12:21:09.836+0000] {taskinstance.py:1138} INFO - Marking task as SUCCESS. dag_id=marine_data_etl_dag, task_id=zooplankton_etl.download_zoo, execution_date=20250802T122035, start_date=20250802T122106, end_date=20250802T122109
+[2025-08-02T12:21:09.896+0000] {local_task_job_runner.py:234} INFO - Task exited with return code 0
+[2025-08-02T12:21:09.989+0000] {taskinstance.py:3280} INFO - 1 downstream tasks scheduled from follow-on schedule check
