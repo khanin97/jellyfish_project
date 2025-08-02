@@ -782,3 +782,90 @@ Traceback (most recent call last):
 NameError: name 'DAG' is not defined
 [2025-08-02T13:02:50.877+0000] {processor.py:842} WARNING - No viable dags retrieved from /opt/airflow/dags/marine_data_etl_dag.py
 [2025-08-02T13:02:50.912+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/marine_data_etl_dag.py took 0.098 seconds
+[2025-08-02T13:03:21.301+0000] {processor.py:161} INFO - Started process (PID=68) to work on /opt/airflow/dags/marine_data_etl_dag.py
+[2025-08-02T13:03:21.303+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/marine_data_etl_dag.py for tasks to queue
+[2025-08-02T13:03:21.305+0000] {logging_mixin.py:188} INFO - [2025-08-02T13:03:21.305+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/marine_data_etl_dag.py
+[2025-08-02T13:03:21.334+0000] {logging_mixin.py:188} INFO - [2025-08-02T13:03:21.329+0000] {dagbag.py:348} ERROR - Failed to import: /opt/airflow/dags/marine_data_etl_dag.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.10/site-packages/airflow/models/dagbag.py", line 344, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 883, in exec_module
+  File "<frozen importlib._bootstrap>", line 241, in _call_with_frames_removed
+  File "/opt/airflow/dags/marine_data_etl_dag.py", line 3, in <module>
+    with DAG(
+NameError: name 'DAG' is not defined
+[2025-08-02T13:03:21.336+0000] {processor.py:842} WARNING - No viable dags retrieved from /opt/airflow/dags/marine_data_etl_dag.py
+[2025-08-02T13:03:21.368+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/marine_data_etl_dag.py took 0.072 seconds
+[2025-08-02T13:03:51.743+0000] {processor.py:161} INFO - Started process (PID=69) to work on /opt/airflow/dags/marine_data_etl_dag.py
+[2025-08-02T13:03:51.745+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/marine_data_etl_dag.py for tasks to queue
+[2025-08-02T13:03:51.749+0000] {logging_mixin.py:188} INFO - [2025-08-02T13:03:51.746+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/marine_data_etl_dag.py
+[2025-08-02T13:03:51.787+0000] {logging_mixin.py:188} INFO - [2025-08-02T13:03:51.781+0000] {dagbag.py:348} ERROR - Failed to import: /opt/airflow/dags/marine_data_etl_dag.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.10/site-packages/airflow/models/dagbag.py", line 344, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 883, in exec_module
+  File "<frozen importlib._bootstrap>", line 241, in _call_with_frames_removed
+  File "/opt/airflow/dags/marine_data_etl_dag.py", line 3, in <module>
+    with DAG(
+NameError: name 'DAG' is not defined
+[2025-08-02T13:03:51.796+0000] {processor.py:842} WARNING - No viable dags retrieved from /opt/airflow/dags/marine_data_etl_dag.py
+[2025-08-02T13:03:51.863+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/marine_data_etl_dag.py took 0.126 seconds
+[2025-08-02T13:04:22.167+0000] {processor.py:161} INFO - Started process (PID=70) to work on /opt/airflow/dags/marine_data_etl_dag.py
+[2025-08-02T13:04:22.170+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/marine_data_etl_dag.py for tasks to queue
+[2025-08-02T13:04:22.176+0000] {logging_mixin.py:188} INFO - [2025-08-02T13:04:22.175+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/marine_data_etl_dag.py
+[2025-08-02T13:04:22.238+0000] {logging_mixin.py:188} INFO - [2025-08-02T13:04:22.221+0000] {dagbag.py:348} ERROR - Failed to import: /opt/airflow/dags/marine_data_etl_dag.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.10/site-packages/airflow/models/dagbag.py", line 344, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 883, in exec_module
+  File "<frozen importlib._bootstrap>", line 241, in _call_with_frames_removed
+  File "/opt/airflow/dags/marine_data_etl_dag.py", line 3, in <module>
+    with DAG(
+NameError: name 'DAG' is not defined
+[2025-08-02T13:04:22.243+0000] {processor.py:842} WARNING - No viable dags retrieved from /opt/airflow/dags/marine_data_etl_dag.py
+[2025-08-02T13:04:22.312+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/marine_data_etl_dag.py took 0.163 seconds
+[2025-08-02T13:04:52.511+0000] {processor.py:161} INFO - Started process (PID=71) to work on /opt/airflow/dags/marine_data_etl_dag.py
+[2025-08-02T13:04:52.514+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/marine_data_etl_dag.py for tasks to queue
+[2025-08-02T13:04:52.516+0000] {logging_mixin.py:188} INFO - [2025-08-02T13:04:52.515+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/marine_data_etl_dag.py
+[2025-08-02T13:04:52.546+0000] {logging_mixin.py:188} INFO - [2025-08-02T13:04:52.540+0000] {dagbag.py:348} ERROR - Failed to import: /opt/airflow/dags/marine_data_etl_dag.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.10/site-packages/airflow/models/dagbag.py", line 344, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 883, in exec_module
+  File "<frozen importlib._bootstrap>", line 241, in _call_with_frames_removed
+  File "/opt/airflow/dags/marine_data_etl_dag.py", line 3, in <module>
+    with DAG(
+NameError: name 'DAG' is not defined
+[2025-08-02T13:04:52.548+0000] {processor.py:842} WARNING - No viable dags retrieved from /opt/airflow/dags/marine_data_etl_dag.py
+[2025-08-02T13:04:52.583+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/marine_data_etl_dag.py took 0.081 seconds
+[2025-08-02T13:05:22.873+0000] {processor.py:161} INFO - Started process (PID=72) to work on /opt/airflow/dags/marine_data_etl_dag.py
+[2025-08-02T13:05:22.876+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/marine_data_etl_dag.py for tasks to queue
+[2025-08-02T13:05:22.879+0000] {logging_mixin.py:188} INFO - [2025-08-02T13:05:22.878+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/marine_data_etl_dag.py
+[2025-08-02T13:05:22.912+0000] {logging_mixin.py:188} INFO - [2025-08-02T13:05:22.905+0000] {dagbag.py:348} ERROR - Failed to import: /opt/airflow/dags/marine_data_etl_dag.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.10/site-packages/airflow/models/dagbag.py", line 344, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 883, in exec_module
+  File "<frozen importlib._bootstrap>", line 241, in _call_with_frames_removed
+  File "/opt/airflow/dags/marine_data_etl_dag.py", line 3, in <module>
+    with DAG(
+NameError: name 'DAG' is not defined
+[2025-08-02T13:05:22.916+0000] {processor.py:842} WARNING - No viable dags retrieved from /opt/airflow/dags/marine_data_etl_dag.py
+[2025-08-02T13:05:22.966+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/marine_data_etl_dag.py took 0.102 seconds
+[2025-08-02T13:05:39.118+0000] {processor.py:161} INFO - Started process (PID=73) to work on /opt/airflow/dags/marine_data_etl_dag.py
+[2025-08-02T13:05:39.120+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/marine_data_etl_dag.py for tasks to queue
+[2025-08-02T13:05:39.122+0000] {logging_mixin.py:188} INFO - [2025-08-02T13:05:39.121+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/marine_data_etl_dag.py
+[2025-08-02T13:05:41.108+0000] {logging_mixin.py:188} INFO - [2025-08-02T13:05:41.101+0000] {dagbag.py:348} ERROR - Failed to import: /opt/airflow/dags/marine_data_etl_dag.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.10/site-packages/airflow/models/dagbag.py", line 344, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 883, in exec_module
+  File "<frozen importlib._bootstrap>", line 241, in _call_with_frames_removed
+  File "/opt/airflow/dags/marine_data_etl_dag.py", line 33, in <module>
+    from download_so import download_so
+ImportError: cannot import name 'download_so' from 'download_so' (/opt/airflow/dags/etl/download_so.py)
+[2025-08-02T13:05:41.113+0000] {processor.py:842} WARNING - No viable dags retrieved from /opt/airflow/dags/marine_data_etl_dag.py
+[2025-08-02T13:05:41.143+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/marine_data_etl_dag.py took 2.031 seconds
+[2025-08-02T13:06:11.971+0000] {processor.py:161} INFO - Started process (PID=75) to work on /opt/airflow/dags/marine_data_etl_dag.py
+[2025-08-02T13:06:11.973+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/marine_data_etl_dag.py for tasks to queue
+[2025-08-02T13:06:11.975+0000] {logging_mixin.py:188} INFO - [2025-08-02T13:06:11.974+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/marine_data_etl_dag.py

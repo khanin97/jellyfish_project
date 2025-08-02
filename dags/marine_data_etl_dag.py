@@ -1,4 +1,39 @@
+from airflow.models import DAG
+from airflow.operators.python import PythonOperator
 from airflow.operators.empty import EmptyOperator
+from airflow.utils.task_group import TaskGroup
+from datetime import datetime
+import sys
+import os
+
+# Add 'dags/etl/' to PYTHONPATH for custom import
+sys.path.append(os.path.join(os.path.dirname(__file__), 'etl'))
+
+# ===== IMPORT ETL FUNCTION =====
+from download_sst import download_sst
+from convert_sst import convert_sst_nc_to_csv
+from load_sst_to_duckdb import load_sst_csv_to_duckdb
+
+from download_thetao import download_thetao
+from convert_thetao import convert_thetao_nc_to_csv
+from load_thetao_to_duckdb import load_thetao_csv_to_duckdb
+
+from download_zooplankton import download_zooplankton
+from convert_zooplankton import convert_zooplankton_nc_to_csv
+from load_zooplankton_to_duckdb import load_zooplankton_csv_to_duckdb
+
+from download_current import download_current
+from convert_current import convert_current_nc_to_csv
+from load_current_to_duckdb import load_current_csv_to_duckdb
+
+from download_phytoplankton import download_phytoplankton
+from convert_phytoplankton import convert_phytoplankton_nc_to_csv
+from load_phytoplankton_to_duckdb import load_phytoplankton_csv_to_duckdb
+
+from download_so import download_so
+from convert_so import convert_so_nc_to_csv
+from load_so_to_duckdb import load_so_csv_to_duckdb
+# =================================
 
 with DAG(
     dag_id="marine_data_etl_dag",
