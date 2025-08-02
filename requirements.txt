@@ -1,0 +1,4 @@
+copernicusmarine
+duckdb
+pandas
+netCDF4

@@ -17,21 +17,19 @@ services:
     depends_on:
       - postgres
     environment:
-      AIRFLOW__CORE__EXECUTOR: LocalExecutor
-      AIRFLOW__CORE__SQL_ALCHEMY_CONN: postgresql+psycopg2://airflow:airflow@postgres/airflow
-      AIRFLOW__CORE__FERNET_KEY: ''
-      AIRFLOW__CORE__DAGS_ARE_PAUSED_AT_CREATION: 'false'
-      AIRFLOW__CORE__LOAD_EXAMPLES: 'false'
-      AIRFLOW_UID: ${AIRFLOW_UID}
+        CMEMS_USERNAME: ${CMEMS_USERNAME}
+        CMEMS_PASSWORD: ${CMEMS_PASSWORD}
     volumes:
       - ./dags:/opt/airflow/dags
       - ./logs:/opt/airflow/logs
       - ./plugins:/opt/airflow/plugins
+      - ./requirements.txt:/requirements.txt   # ✅ เพิ่มบรรทัดนี้
     ports:
       - "8080:8080"
-    command: webserver
+    command: bash -c "pip install -r /requirements.txt && airflow webserver"  # ✅ แก้ command
     networks:
       - airflow
+
 
   scheduler:
     image: apache/airflow:2.8.1
@@ -39,16 +37,17 @@ services:
     depends_on:
       - webserver
     environment:
-      AIRFLOW__CORE__EXECUTOR: LocalExecutor
-      AIRFLOW__CORE__SQL_ALCHEMY_CONN: postgresql+psycopg2://airflow:airflow@postgres/airflow
-      AIRFLOW_UID: ${AIRFLOW_UID}
+        CMEMS_USERNAME: ${CMEMS_USERNAME}
+        CMEMS_PASSWORD: ${CMEMS_PASSWORD}
     volumes:
       - ./dags:/opt/airflow/dags
       - ./logs:/opt/airflow/logs
       - ./plugins:/opt/airflow/plugins
-    command: scheduler
+      - ./requirements.txt:/requirements.txt   # ✅ เพิ่มบรรทัดนี้
+    command: bash -c "pip install -r /requirements.txt && airflow scheduler"  # ✅ แก้ command
     networks:
       - airflow
+
 
 volumes:
   postgres-db-volume:
