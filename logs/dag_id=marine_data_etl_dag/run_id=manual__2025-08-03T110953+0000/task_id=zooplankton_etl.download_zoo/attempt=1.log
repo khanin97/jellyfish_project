@@ -1,0 +1,85 @@
+[2025-08-03T11:13:32.125+0000] {taskinstance.py:1956} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: marine_data_etl_dag.zooplankton_etl.download_zoo manual__2025-08-03T11:09:53+00:00 [queued]>
+[2025-08-03T11:13:32.142+0000] {taskinstance.py:1956} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: marine_data_etl_dag.zooplankton_etl.download_zoo manual__2025-08-03T11:09:53+00:00 [queued]>
+[2025-08-03T11:13:32.143+0000] {taskinstance.py:2170} INFO - Starting attempt 1 of 1
+[2025-08-03T11:13:32.170+0000] {taskinstance.py:2191} INFO - Executing <Task(PythonOperator): zooplankton_etl.download_zoo> on 2025-08-03 11:09:53+00:00
+[2025-08-03T11:13:32.177+0000] {standard_task_runner.py:60} INFO - Started process 113 to run task
+[2025-08-03T11:13:32.183+0000] {standard_task_runner.py:87} INFO - Running: ['***', 'tasks', 'run', 'marine_data_etl_dag', 'zooplankton_etl.download_zoo', 'manual__2025-08-03T11:09:53+00:00', '--job-id', '260', '--raw', '--subdir', 'DAGS_FOLDER/marine_data_etl_dag.py', '--cfg-path', '/tmp/tmp27c4r_5i']
+[2025-08-03T11:13:32.188+0000] {standard_task_runner.py:88} INFO - Job 260: Subtask zooplankton_etl.download_zoo
+[2025-08-03T11:13:32.267+0000] {task_command.py:423} INFO - Running <TaskInstance: marine_data_etl_dag.zooplankton_etl.download_zoo manual__2025-08-03T11:09:53+00:00 [running]> on host fce0ae18e39f
+[2025-08-03T11:13:32.814+0000] {taskinstance.py:2480} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='marine_data_etl_dag' AIRFLOW_CTX_TASK_ID='zooplankton_etl.download_zoo' AIRFLOW_CTX_EXECUTION_DATE='2025-08-03T11:09:53+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2025-08-03T11:09:53+00:00'
+[2025-08-03T11:13:32.822+0000] {deprecated_options.py:61} WARNING - 'force_download' has been deprecated.
+[2025-08-03T11:13:36.757+0000] {services_utils.py:262} INFO - Selected dataset version: "202411"
+[2025-08-03T11:13:36.791+0000] {services_utils.py:286} INFO - Selected dataset part: "default"
+[2025-08-03T11:13:36.826+0000] {subset_xarray.py:832} WARNING - Some of your subset selection [2022-06-01 00:00:00+00:00, 2025-08-03 00:00:00+00:00] for the time dimension exceed the dataset coordinates [2023-11-29 00:00:00+00:00, 2025-08-08 00:00:00+00:00]
+[2025-08-03T11:13:41.548+0000] {download_zarr.py:169} INFO - Starting download. Please wait...
+[2025-08-03T11:13:41.722+0000] {logging_mixin.py:188} WARNING -   0%|          | 0/67 [00:00<?, ?it/s]
+[2025-08-03T11:13:46.561+0000] {logging_mixin.py:188} WARNING -   1%|1         | 1/67 [00:04<05:19,  4.84s/it]
+[2025-08-03T11:13:47.074+0000] {logging_mixin.py:188} WARNING -   6%|5         | 4/67 [00:05<01:06,  1.05s/it]
+[2025-08-03T11:13:48.217+0000] {logging_mixin.py:188} WARNING -  16%|#6        | 11/67 [00:06<00:22,  2.48it/s]
+[2025-08-03T11:13:54.626+0000] {logging_mixin.py:188} WARNING -  34%|###4      | 23/67 [00:12<00:21,  2.05it/s]
+[2025-08-03T11:13:56.186+0000] {logging_mixin.py:188} WARNING -  39%|###8      | 26/67 [00:14<00:20,  2.03it/s]
+[2025-08-03T11:14:01.427+0000] {logging_mixin.py:188} WARNING -  67%|######7   | 45/67 [00:19<00:07,  2.80it/s]
+[2025-08-03T11:14:03.001+0000] {logging_mixin.py:188} WARNING -  73%|#######3  | 49/67 [00:21<00:06,  2.76it/s]
+[2025-08-03T11:14:04.030+0000] {logging_mixin.py:188} WARNING -  79%|#######9  | 53/67 [00:22<00:04,  2.91it/s]
+[2025-08-03T11:14:04.073+0000] {logging_mixin.py:188} WARNING - 100%|##########| 67/67 [00:22<00:00,  3.00it/s]
+[2025-08-03T11:14:04.088+0000] {download_zarr.py:185} INFO - Successfully downloaded to /opt/***/nc/zooplankton/rayong_1_zooplankton.nc
+[2025-08-03T11:14:04.090+0000] {logging_mixin.py:188} INFO - ✅ Downloaded zooplankton: /opt/***/nc/zooplankton/rayong_1_zooplankton.nc
+[2025-08-03T11:14:04.094+0000] {deprecated_options.py:61} WARNING - 'force_download' has been deprecated.
+[2025-08-03T11:14:07.669+0000] {services_utils.py:262} INFO - Selected dataset version: "202411"
+[2025-08-03T11:14:07.670+0000] {services_utils.py:286} INFO - Selected dataset part: "default"
+[2025-08-03T11:14:07.672+0000] {subset_xarray.py:832} WARNING - Some of your subset selection [2022-06-01 00:00:00+00:00, 2025-08-03 00:00:00+00:00] for the time dimension exceed the dataset coordinates [2023-11-29 00:00:00+00:00, 2025-08-08 00:00:00+00:00]
+[2025-08-03T11:14:11.559+0000] {download_zarr.py:169} INFO - Starting download. Please wait...
+[2025-08-03T11:14:11.662+0000] {logging_mixin.py:188} WARNING -   0%|          | 0/67 [00:00<?, ?it/s]
+[2025-08-03T11:14:15.733+0000] {logging_mixin.py:188} WARNING -   1%|1         | 1/67 [00:04<04:28,  4.07s/it]
+[2025-08-03T11:14:16.790+0000] {logging_mixin.py:188} WARNING -   6%|5         | 4/67 [00:05<01:06,  1.06s/it]
+[2025-08-03T11:14:17.755+0000] {logging_mixin.py:188} WARNING -  16%|#6        | 11/67 [00:06<00:21,  2.59it/s]
+[2025-08-03T11:14:23.361+0000] {logging_mixin.py:188} WARNING -  34%|###4      | 23/67 [00:11<00:19,  2.28it/s]
+[2025-08-03T11:14:24.479+0000] {logging_mixin.py:188} WARNING -  39%|###8      | 26/67 [00:12<00:17,  2.35it/s]
+[2025-08-03T11:14:24.857+0000] {logging_mixin.py:188} WARNING -  49%|####9     | 33/67 [00:13<00:09,  3.53it/s]
+[2025-08-03T11:14:29.394+0000] {logging_mixin.py:188} WARNING -  67%|######7   | 45/67 [00:17<00:07,  3.04it/s]
+[2025-08-03T11:14:30.093+0000] {logging_mixin.py:188} WARNING -  73%|#######3  | 49/67 [00:18<00:05,  3.33it/s]
+[2025-08-03T11:14:32.219+0000] {logging_mixin.py:188} WARNING -  79%|#######9  | 53/67 [00:20<00:04,  2.86it/s]
+[2025-08-03T11:14:32.257+0000] {logging_mixin.py:188} WARNING - 100%|##########| 67/67 [00:20<00:00,  3.25it/s]
+[2025-08-03T11:14:32.280+0000] {download_zarr.py:185} INFO - Successfully downloaded to /opt/***/nc/zooplankton/rayong_2_zooplankton.nc
+[2025-08-03T11:14:32.282+0000] {logging_mixin.py:188} INFO - ✅ Downloaded zooplankton: /opt/***/nc/zooplankton/rayong_2_zooplankton.nc
+[2025-08-03T11:14:32.288+0000] {deprecated_options.py:61} WARNING - 'force_download' has been deprecated.
+[2025-08-03T11:14:35.976+0000] {services_utils.py:262} INFO - Selected dataset version: "202411"
+[2025-08-03T11:14:35.977+0000] {services_utils.py:286} INFO - Selected dataset part: "default"
+[2025-08-03T11:14:35.979+0000] {subset_xarray.py:832} WARNING - Some of your subset selection [2022-06-01 00:00:00+00:00, 2025-08-03 00:00:00+00:00] for the time dimension exceed the dataset coordinates [2023-11-29 00:00:00+00:00, 2025-08-08 00:00:00+00:00]
+[2025-08-03T11:14:39.830+0000] {download_zarr.py:169} INFO - Starting download. Please wait...
+[2025-08-03T11:14:39.964+0000] {logging_mixin.py:188} WARNING -   0%|          | 0/67 [00:00<?, ?it/s]
+[2025-08-03T11:14:44.697+0000] {logging_mixin.py:188} WARNING -   1%|1         | 1/67 [00:04<05:12,  4.73s/it]
+[2025-08-03T11:14:45.577+0000] {logging_mixin.py:188} WARNING -   6%|5         | 4/67 [00:05<01:11,  1.13s/it]
+[2025-08-03T11:14:46.498+0000] {logging_mixin.py:188} WARNING -  16%|#6        | 11/67 [00:06<00:22,  2.49it/s]
+[2025-08-03T11:14:52.604+0000] {logging_mixin.py:188} WARNING -  34%|###4      | 23/67 [00:12<00:20,  2.13it/s]
+[2025-08-03T11:14:53.921+0000] {logging_mixin.py:188} WARNING -  39%|###8      | 26/67 [00:13<00:19,  2.15it/s]
+[2025-08-03T11:14:54.143+0000] {logging_mixin.py:188} WARNING -  46%|####6     | 31/67 [00:14<00:12,  2.98it/s]
+[2025-08-03T11:14:59.406+0000] {logging_mixin.py:188} WARNING -  67%|######7   | 45/67 [00:19<00:07,  2.79it/s]
+[2025-08-03T11:14:59.950+0000] {logging_mixin.py:188} WARNING -  73%|#######3  | 49/67 [00:19<00:05,  3.15it/s]
+[2025-08-03T11:15:00.820+0000] {logging_mixin.py:188} WARNING -  79%|#######9  | 53/67 [00:20<00:04,  3.37it/s]
+[2025-08-03T11:15:00.850+0000] {logging_mixin.py:188} WARNING - 100%|##########| 67/67 [00:20<00:00,  3.21it/s]
+[2025-08-03T11:15:00.862+0000] {download_zarr.py:185} INFO - Successfully downloaded to /opt/***/nc/zooplankton/chanthaburi_1_zooplankton.nc
+[2025-08-03T11:15:00.864+0000] {logging_mixin.py:188} INFO - ✅ Downloaded zooplankton: /opt/***/nc/zooplankton/chanthaburi_1_zooplankton.nc
+[2025-08-03T11:15:00.865+0000] {deprecated_options.py:61} WARNING - 'force_download' has been deprecated.
+[2025-08-03T11:15:04.485+0000] {services_utils.py:262} INFO - Selected dataset version: "202411"
+[2025-08-03T11:15:04.487+0000] {services_utils.py:286} INFO - Selected dataset part: "default"
+[2025-08-03T11:15:04.489+0000] {subset_xarray.py:832} WARNING - Some of your subset selection [2022-06-01 00:00:00+00:00, 2025-08-03 00:00:00+00:00] for the time dimension exceed the dataset coordinates [2023-11-29 00:00:00+00:00, 2025-08-08 00:00:00+00:00]
+[2025-08-03T11:15:08.153+0000] {download_zarr.py:169} INFO - Starting download. Please wait...
+[2025-08-03T11:15:08.430+0000] {logging_mixin.py:188} WARNING -   0%|          | 0/67 [00:00<?, ?it/s]
+[2025-08-03T11:15:13.008+0000] {logging_mixin.py:188} WARNING -   1%|1         | 1/67 [00:04<05:02,  4.58s/it]
+[2025-08-03T11:15:13.450+0000] {logging_mixin.py:188} WARNING -   6%|5         | 4/67 [00:05<01:02,  1.01it/s]
+[2025-08-03T11:15:14.403+0000] {logging_mixin.py:188} WARNING -  16%|#6        | 11/67 [00:05<00:20,  2.74it/s]
+[2025-08-03T11:15:22.172+0000] {logging_mixin.py:188} WARNING -  34%|###4      | 23/67 [00:13<00:24,  1.83it/s]
+[2025-08-03T11:15:23.824+0000] {logging_mixin.py:188} WARNING -  39%|###8      | 26/67 [00:15<00:22,  1.83it/s]
+[2025-08-03T11:15:24.337+0000] {logging_mixin.py:188} WARNING -  46%|####6     | 31/67 [00:15<00:14,  2.44it/s]
+[2025-08-03T11:15:24.469+0000] {logging_mixin.py:188} WARNING -  64%|######4   | 43/67 [00:16<00:04,  4.86it/s]
+[2025-08-03T11:15:28.202+0000] {logging_mixin.py:188} WARNING -  70%|#######   | 47/67 [00:19<00:06,  2.87it/s]
+[2025-08-03T11:15:29.739+0000] {logging_mixin.py:188} WARNING -  75%|#######4  | 50/67 [00:21<00:06,  2.65it/s]
+[2025-08-03T11:15:30.438+0000] {logging_mixin.py:188} WARNING -  79%|#######9  | 53/67 [00:22<00:04,  2.87it/s]
+[2025-08-03T11:15:30.480+0000] {logging_mixin.py:188} WARNING - 100%|##########| 67/67 [00:22<00:00,  3.04it/s]
+[2025-08-03T11:15:30.490+0000] {download_zarr.py:185} INFO - Successfully downloaded to /opt/***/nc/zooplankton/trat_1_zooplankton.nc
+[2025-08-03T11:15:30.492+0000] {logging_mixin.py:188} INFO - ✅ Downloaded zooplankton: /opt/***/nc/zooplankton/trat_1_zooplankton.nc
+[2025-08-03T11:15:30.492+0000] {python.py:201} INFO - Done. Returned value was: None
+[2025-08-03T11:15:30.508+0000] {taskinstance.py:1138} INFO - Marking task as SUCCESS. dag_id=marine_data_etl_dag, task_id=zooplankton_etl.download_zoo, execution_date=20250803T110953, start_date=20250803T111332, end_date=20250803T111530
+[2025-08-03T11:15:30.559+0000] {local_task_job_runner.py:234} INFO - Task exited with return code 0
+[2025-08-03T11:15:30.735+0000] {taskinstance.py:3280} INFO - 1 downstream tasks scheduled from follow-on schedule check

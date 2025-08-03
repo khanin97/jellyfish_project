@@ -1,0 +1,109 @@
+[2025-08-03T06:55:20.118+0000] {taskinstance.py:1956} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: marine_data_etl_dag.phyto_etl.download_phyto manual__2025-08-03T06:41:01+00:00 [queued]>
+[2025-08-03T06:55:20.135+0000] {taskinstance.py:1956} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: marine_data_etl_dag.phyto_etl.download_phyto manual__2025-08-03T06:41:01+00:00 [queued]>
+[2025-08-03T06:55:20.136+0000] {taskinstance.py:2170} INFO - Starting attempt 1 of 1
+[2025-08-03T06:55:20.163+0000] {taskinstance.py:2191} INFO - Executing <Task(PythonOperator): phyto_etl.download_phyto> on 2025-08-03 06:41:01+00:00
+[2025-08-03T06:55:20.172+0000] {standard_task_runner.py:60} INFO - Started process 369 to run task
+[2025-08-03T06:55:20.180+0000] {standard_task_runner.py:87} INFO - Running: ['***', 'tasks', 'run', 'marine_data_etl_dag', 'phyto_etl.download_phyto', 'manual__2025-08-03T06:41:01+00:00', '--job-id', '242', '--raw', '--subdir', 'DAGS_FOLDER/marine_data_etl_dag.py', '--cfg-path', '/tmp/tmptx5zsg7h']
+[2025-08-03T06:55:20.188+0000] {standard_task_runner.py:88} INFO - Job 242: Subtask phyto_etl.download_phyto
+[2025-08-03T06:55:20.274+0000] {task_command.py:423} INFO - Running <TaskInstance: marine_data_etl_dag.phyto_etl.download_phyto manual__2025-08-03T06:41:01+00:00 [running]> on host e2f3b0101b9e
+[2025-08-03T06:55:20.695+0000] {taskinstance.py:2480} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='marine_data_etl_dag' AIRFLOW_CTX_TASK_ID='phyto_etl.download_phyto' AIRFLOW_CTX_EXECUTION_DATE='2025-08-03T06:41:01+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2025-08-03T06:41:01+00:00'
+[2025-08-03T06:55:20.702+0000] {deprecated_options.py:61} WARNING - 'force_download' has been deprecated.
+[2025-08-03T06:55:24.272+0000] {services_utils.py:262} INFO - Selected dataset version: "202311"
+[2025-08-03T06:55:24.273+0000] {services_utils.py:286} INFO - Selected dataset part: "default"
+[2025-08-03T06:55:28.636+0000] {download_zarr.py:169} INFO - Starting download. Please wait...
+[2025-08-03T06:55:28.801+0000] {logging_mixin.py:188} WARNING -   0%|          | 0/128 [00:00<?, ?it/s]
+[2025-08-03T06:55:43.510+0000] {logging_mixin.py:188} WARNING -   1%|          | 1/128 [00:14<31:07, 14.71s/it]
+[2025-08-03T06:55:55.165+0000] {logging_mixin.py:188} WARNING -   9%|9         | 12/128 [00:26<03:37,  1.88s/it]
+[2025-08-03T06:55:55.446+0000] {logging_mixin.py:188} WARNING -  12%|#2        | 16/128 [00:26<02:23,  1.28s/it]
+[2025-08-03T06:55:56.549+0000] {logging_mixin.py:188} WARNING -  22%|##1       | 28/128 [00:27<00:58,  1.70it/s]
+[2025-08-03T06:55:57.844+0000] {logging_mixin.py:188} WARNING -  27%|##6       | 34/128 [00:29<00:44,  2.09it/s]
+[2025-08-03T06:55:57.961+0000] {logging_mixin.py:188} WARNING -  32%|###2      | 41/128 [00:29<00:28,  3.07it/s]
+[2025-08-03T06:56:08.606+0000] {logging_mixin.py:188} WARNING -  41%|####1     | 53/128 [00:39<00:43,  1.73it/s]
+[2025-08-03T06:56:09.887+0000] {logging_mixin.py:188} WARNING -  52%|#####1    | 66/128 [00:41<00:23,  2.62it/s]
+[2025-08-03T06:56:14.222+0000] {logging_mixin.py:188} WARNING -  55%|#####4    | 70/128 [00:45<00:28,  2.05it/s]
+[2025-08-03T06:56:17.212+0000] {logging_mixin.py:188} WARNING -  58%|#####7    | 74/128 [00:48<00:28,  1.87it/s]
+[2025-08-03T06:56:17.444+0000] {logging_mixin.py:188} WARNING -  59%|#####9    | 76/128 [00:48<00:25,  2.05it/s]
+[2025-08-03T06:56:17.680+0000] {logging_mixin.py:188} WARNING -  60%|######    | 77/128 [00:48<00:23,  2.14it/s]
+[2025-08-03T06:56:17.818+0000] {logging_mixin.py:188} WARNING -  61%|######    | 78/128 [00:49<00:21,  2.29it/s]
+[2025-08-03T06:56:17.953+0000] {logging_mixin.py:188} WARNING -  62%|######2   | 80/128 [00:49<00:17,  2.80it/s]
+[2025-08-03T06:56:18.133+0000] {logging_mixin.py:188} WARNING -  66%|######5   | 84/128 [00:49<00:10,  4.21it/s]
+[2025-08-03T06:56:21.438+0000] {logging_mixin.py:188} WARNING -  70%|######9   | 89/128 [00:52<00:15,  2.44it/s]
+[2025-08-03T06:56:28.026+0000] {logging_mixin.py:188} WARNING -  82%|########2 | 105/128 [00:59<00:09,  2.44it/s]
+[2025-08-03T06:56:29.089+0000] {logging_mixin.py:188} WARNING -  88%|########8 | 113/128 [01:00<00:04,  3.10it/s]
+[2025-08-03T06:56:33.143+0000] {logging_mixin.py:188} WARNING -  91%|######### | 116/128 [01:04<00:05,  2.12it/s]
+[2025-08-03T06:56:33.161+0000] {logging_mixin.py:188} WARNING - 100%|##########| 128/128 [01:04<00:00,  1.99it/s]
+[2025-08-03T06:56:33.172+0000] {download_zarr.py:185} INFO - Successfully downloaded to /opt/***/nc/phytoplankton/rayong_1_phytoplankton.nc
+[2025-08-03T06:56:33.174+0000] {logging_mixin.py:188} INFO - ✅ Downloaded phytoplankton: /opt/***/nc/phytoplankton/rayong_1_phytoplankton.nc
+[2025-08-03T06:56:33.175+0000] {deprecated_options.py:61} WARNING - 'force_download' has been deprecated.
+[2025-08-03T06:56:36.790+0000] {services_utils.py:262} INFO - Selected dataset version: "202311"
+[2025-08-03T06:56:36.791+0000] {services_utils.py:286} INFO - Selected dataset part: "default"
+[2025-08-03T06:56:40.824+0000] {download_zarr.py:169} INFO - Starting download. Please wait...
+[2025-08-03T06:56:40.927+0000] {logging_mixin.py:188} WARNING -   0%|          | 0/128 [00:00<?, ?it/s]
+[2025-08-03T06:56:54.315+0000] {logging_mixin.py:188} WARNING -   1%|          | 1/128 [00:13<28:20, 13.39s/it]
+[2025-08-03T06:56:57.325+0000] {logging_mixin.py:188} WARNING -   3%|3         | 4/128 [00:16<06:54,  3.35s/it]
+[2025-08-03T06:57:01.332+0000] {logging_mixin.py:188} WARNING -   9%|9         | 12/128 [00:20<02:18,  1.20s/it]
+[2025-08-03T06:57:08.161+0000] {logging_mixin.py:188} WARNING -  19%|#8        | 24/128 [00:27<01:24,  1.24it/s]
+[2025-08-03T06:57:08.806+0000] {logging_mixin.py:188} WARNING -  27%|##6       | 34/128 [00:27<00:46,  2.03it/s]
+[2025-08-03T06:57:19.581+0000] {logging_mixin.py:188} WARNING -  29%|##8       | 37/128 [00:38<01:28,  1.03it/s]
+[2025-08-03T06:57:20.011+0000] {logging_mixin.py:188} WARNING -  41%|####1     | 53/128 [00:39<00:34,  2.17it/s]
+[2025-08-03T06:57:22.504+0000] {logging_mixin.py:188} WARNING -  44%|####3     | 56/128 [00:41<00:36,  1.97it/s]
+[2025-08-03T06:57:24.112+0000] {logging_mixin.py:188} WARNING -  52%|#####1    | 66/128 [00:43<00:23,  2.65it/s]
+[2025-08-03T06:57:24.230+0000] {logging_mixin.py:188} WARNING -  62%|######1   | 79/128 [00:43<00:11,  4.42it/s]
+[2025-08-03T06:57:26.633+0000] {logging_mixin.py:188} WARNING -  66%|######5   | 84/128 [00:45<00:12,  3.66it/s]
+[2025-08-03T06:57:26.776+0000] {logging_mixin.py:188} WARNING -  68%|######7   | 87/128 [00:45<00:09,  4.13it/s]
+[2025-08-03T06:57:27.501+0000] {logging_mixin.py:188} WARNING -  70%|#######   | 90/128 [00:46<00:09,  4.13it/s]
+[2025-08-03T06:57:30.825+0000] {logging_mixin.py:188} WARNING -  73%|#######2  | 93/128 [00:49<00:14,  2.46it/s]
+[2025-08-03T06:57:41.044+0000] {logging_mixin.py:188} WARNING -  82%|########2 | 105/128 [01:00<00:14,  1.57it/s]
+[2025-08-03T06:57:43.189+0000] {logging_mixin.py:188} WARNING -  88%|########8 | 113/128 [01:02<00:07,  1.94it/s]
+[2025-08-03T06:57:43.703+0000] {logging_mixin.py:188} WARNING -  95%|#########5| 122/128 [01:02<00:02,  2.81it/s]
+[2025-08-03T06:57:43.715+0000] {logging_mixin.py:188} WARNING - 100%|##########| 128/128 [01:02<00:00,  2.04it/s]
+[2025-08-03T06:57:43.732+0000] {download_zarr.py:185} INFO - Successfully downloaded to /opt/***/nc/phytoplankton/rayong_2_phytoplankton.nc
+[2025-08-03T06:57:43.734+0000] {logging_mixin.py:188} INFO - ✅ Downloaded phytoplankton: /opt/***/nc/phytoplankton/rayong_2_phytoplankton.nc
+[2025-08-03T06:57:43.735+0000] {deprecated_options.py:61} WARNING - 'force_download' has been deprecated.
+[2025-08-03T06:57:48.167+0000] {services_utils.py:262} INFO - Selected dataset version: "202311"
+[2025-08-03T06:57:48.168+0000] {services_utils.py:286} INFO - Selected dataset part: "default"
+[2025-08-03T06:57:51.842+0000] {download_zarr.py:169} INFO - Starting download. Please wait...
+[2025-08-03T06:57:51.978+0000] {logging_mixin.py:188} WARNING -   0%|          | 0/128 [00:00<?, ?it/s]
+[2025-08-03T06:58:06.646+0000] {logging_mixin.py:188} WARNING -   1%|          | 1/128 [00:14<31:02, 14.67s/it]
+[2025-08-03T06:58:07.860+0000] {logging_mixin.py:188} WARNING -   3%|3         | 4/128 [00:15<06:24,  3.10s/it]
+[2025-08-03T06:58:15.017+0000] {logging_mixin.py:188} WARNING -   9%|9         | 12/128 [00:23<02:46,  1.43s/it]
+[2025-08-03T06:58:21.393+0000] {logging_mixin.py:188} WARNING -  19%|#8        | 24/128 [00:29<01:31,  1.14it/s]
+[2025-08-03T06:58:25.593+0000] {logging_mixin.py:188} WARNING -  27%|##6       | 34/128 [00:33<01:04,  1.46it/s]
+[2025-08-03T06:58:26.540+0000] {logging_mixin.py:188} WARNING -  35%|###5      | 45/128 [00:34<00:36,  2.25it/s]
+[2025-08-03T06:58:35.147+0000] {logging_mixin.py:188} WARNING -  41%|####1     | 53/128 [00:43<00:47,  1.59it/s]
+[2025-08-03T06:58:36.441+0000] {logging_mixin.py:188} WARNING -  45%|####4     | 57/128 [00:44<00:40,  1.73it/s]
+[2025-08-03T06:58:37.533+0000] {logging_mixin.py:188} WARNING -  58%|#####7    | 74/128 [00:45<00:16,  3.19it/s]
+[2025-08-03T06:58:42.182+0000] {logging_mixin.py:188} WARNING -  61%|######    | 78/128 [00:50<00:21,  2.28it/s]
+[2025-08-03T06:58:43.339+0000] {logging_mixin.py:188} WARNING -  76%|#######5  | 97/128 [00:51<00:07,  4.00it/s]
+[2025-08-03T06:58:54.560+0000] {logging_mixin.py:188} WARNING -  82%|########2 | 105/128 [01:02<00:11,  1.94it/s]
+[2025-08-03T06:58:54.767+0000] {logging_mixin.py:188} WARNING -  84%|########4 | 108/128 [01:02<00:09,  2.14it/s]
+[2025-08-03T06:58:57.616+0000] {logging_mixin.py:188} WARNING -  91%|######### | 116/128 [01:05<00:05,  2.30it/s]
+[2025-08-03T06:58:57.651+0000] {logging_mixin.py:188} WARNING - 100%|##########| 128/128 [01:05<00:00,  1.95it/s]
+[2025-08-03T06:58:57.669+0000] {download_zarr.py:185} INFO - Successfully downloaded to /opt/***/nc/phytoplankton/chanthaburi_1_phytoplankton.nc
+[2025-08-03T06:58:57.671+0000] {logging_mixin.py:188} INFO - ✅ Downloaded phytoplankton: /opt/***/nc/phytoplankton/chanthaburi_1_phytoplankton.nc
+[2025-08-03T06:58:57.672+0000] {deprecated_options.py:61} WARNING - 'force_download' has been deprecated.
+[2025-08-03T06:59:01.275+0000] {services_utils.py:262} INFO - Selected dataset version: "202311"
+[2025-08-03T06:59:01.276+0000] {services_utils.py:286} INFO - Selected dataset part: "default"
+[2025-08-03T06:59:05.247+0000] {download_zarr.py:169} INFO - Starting download. Please wait...
+[2025-08-03T06:59:05.397+0000] {logging_mixin.py:188} WARNING -   0%|          | 0/128 [00:00<?, ?it/s]
+[2025-08-03T06:59:19.123+0000] {logging_mixin.py:188} WARNING -   1%|          | 1/128 [00:13<29:03, 13.72s/it]
+[2025-08-03T06:59:19.288+0000] {logging_mixin.py:188} WARNING -   7%|7         | 9/128 [00:13<02:13,  1.12s/it]
+[2025-08-03T06:59:30.740+0000] {logging_mixin.py:188} WARNING -  11%|#         | 14/128 [00:25<03:08,  1.65s/it]
+[2025-08-03T06:59:32.188+0000] {logging_mixin.py:188} WARNING -  12%|#2        | 16/128 [00:26<02:43,  1.46s/it]
+[2025-08-03T06:59:33.792+0000] {logging_mixin.py:188} WARNING -  22%|##1       | 28/128 [00:28<01:01,  1.63it/s]
+[2025-08-03T06:59:34.894+0000] {logging_mixin.py:188} WARNING -  35%|###5      | 45/128 [00:29<00:25,  3.28it/s]
+[2025-08-03T06:59:44.341+0000] {logging_mixin.py:188} WARNING -  41%|####1     | 53/128 [00:38<00:40,  1.83it/s]
+[2025-08-03T06:59:48.114+0000] {logging_mixin.py:188} WARNING -  45%|####4     | 57/128 [00:42<00:43,  1.64it/s]
+[2025-08-03T06:59:51.474+0000] {logging_mixin.py:188} WARNING -  55%|#####4    | 70/128 [00:46<00:26,  2.18it/s]
+[2025-08-03T06:59:51.593+0000] {logging_mixin.py:188} WARNING -  69%|######8   | 88/128 [00:46<00:10,  4.00it/s]
+[2025-08-03T06:59:55.900+0000] {logging_mixin.py:188} WARNING -  77%|#######7  | 99/128 [00:50<00:08,  3.44it/s]
+[2025-08-03T07:00:01.077+0000] {logging_mixin.py:188} WARNING -  82%|########2 | 105/128 [00:55<00:09,  2.53it/s]
+[2025-08-03T07:00:03.737+0000] {logging_mixin.py:188} WARNING -  88%|########8 | 113/128 [00:58<00:05,  2.64it/s]
+[2025-08-03T07:00:11.342+0000] {logging_mixin.py:188} WARNING -  91%|######### | 116/128 [01:05<00:07,  1.56it/s]
+[2025-08-03T07:00:11.370+0000] {logging_mixin.py:188} WARNING - 100%|##########| 128/128 [01:05<00:00,  1.94it/s]
+[2025-08-03T07:00:11.384+0000] {download_zarr.py:185} INFO - Successfully downloaded to /opt/***/nc/phytoplankton/trat_1_phytoplankton.nc
+[2025-08-03T07:00:11.385+0000] {logging_mixin.py:188} INFO - ✅ Downloaded phytoplankton: /opt/***/nc/phytoplankton/trat_1_phytoplankton.nc
+[2025-08-03T07:00:11.386+0000] {python.py:201} INFO - Done. Returned value was: None
+[2025-08-03T07:00:11.402+0000] {taskinstance.py:1138} INFO - Marking task as SUCCESS. dag_id=marine_data_etl_dag, task_id=phyto_etl.download_phyto, execution_date=20250803T064101, start_date=20250803T065520, end_date=20250803T070011
+[2025-08-03T07:00:11.500+0000] {local_task_job_runner.py:234} INFO - Task exited with return code 0
+[2025-08-03T07:00:11.776+0000] {taskinstance.py:3280} INFO - 1 downstream tasks scheduled from follow-on schedule check

@@ -24,6 +24,10 @@ services:
     volumes:
       - ./airflow:/opt/airflow
       - ./requirements.txt:/requirements.txt
+      - ./airflow/logs:/opt/airflow/logs
+      - ./airflow/nc:/opt/airflow/nc
+      - ./airflow/csv:/opt/airflow/csv
+      - ./airflow/db:/opt/airflow/db
     ports:
       - "8181:8080"
     command: bash -c "pip install -r /requirements.txt && airflow webserver"
@@ -43,6 +47,10 @@ services:
     volumes:
       - ./airflow:/opt/airflow
       - ./requirements.txt:/requirements.txt
+      - ./airflow/logs:/opt/airflow/logs
+      - ./airflow/nc:/opt/airflow/nc
+      - ./airflow/csv:/opt/airflow/csv
+      - ./airflow/db:/opt/airflow/db
     command: bash -c "pip install -r /requirements.txt && airflow scheduler"
     networks:
       - airflow
@@ -59,6 +67,10 @@ services:
     volumes:
       - ./airflow:/opt/airflow
       - ./requirements.txt:/requirements.txt
+      - ./airflow/logs:/opt/airflow/logs
+      - ./airflow/nc:/opt/airflow/nc
+      - ./airflow/csv:/opt/airflow/csv
+      - ./airflow/db:/opt/airflow/db
     entrypoint: >
       bash -c "airflow db migrate &&
                airflow users create --username admin --password admin --firstname admin --lastname admin --role Admin --email admin@example.com"

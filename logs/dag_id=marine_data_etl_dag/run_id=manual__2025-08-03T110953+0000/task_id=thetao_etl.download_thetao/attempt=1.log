@@ -1,0 +1,116 @@
+[2025-08-03T11:11:01.702+0000] {taskinstance.py:1956} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: marine_data_etl_dag.thetao_etl.download_thetao manual__2025-08-03T11:09:53+00:00 [queued]>
+[2025-08-03T11:11:01.714+0000] {taskinstance.py:1956} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: marine_data_etl_dag.thetao_etl.download_thetao manual__2025-08-03T11:09:53+00:00 [queued]>
+[2025-08-03T11:11:01.715+0000] {taskinstance.py:2170} INFO - Starting attempt 1 of 1
+[2025-08-03T11:11:01.734+0000] {taskinstance.py:2191} INFO - Executing <Task(PythonOperator): thetao_etl.download_thetao> on 2025-08-03 11:09:53+00:00
+[2025-08-03T11:11:01.739+0000] {standard_task_runner.py:60} INFO - Started process 91 to run task
+[2025-08-03T11:11:01.745+0000] {standard_task_runner.py:87} INFO - Running: ['***', 'tasks', 'run', 'marine_data_etl_dag', 'thetao_etl.download_thetao', 'manual__2025-08-03T11:09:53+00:00', '--job-id', '259', '--raw', '--subdir', 'DAGS_FOLDER/marine_data_etl_dag.py', '--cfg-path', '/tmp/tmpqpl1lbes']
+[2025-08-03T11:11:01.749+0000] {standard_task_runner.py:88} INFO - Job 259: Subtask thetao_etl.download_thetao
+[2025-08-03T11:11:01.815+0000] {task_command.py:423} INFO - Running <TaskInstance: marine_data_etl_dag.thetao_etl.download_thetao manual__2025-08-03T11:09:53+00:00 [running]> on host fce0ae18e39f
+[2025-08-03T11:11:02.125+0000] {taskinstance.py:2480} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='marine_data_etl_dag' AIRFLOW_CTX_TASK_ID='thetao_etl.download_thetao' AIRFLOW_CTX_EXECUTION_DATE='2025-08-03T11:09:53+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2025-08-03T11:09:53+00:00'
+[2025-08-03T11:11:02.130+0000] {deprecated_options.py:61} WARNING - 'force_download' has been deprecated.
+[2025-08-03T11:11:05.974+0000] {services_utils.py:262} INFO - Selected dataset version: "202406"
+[2025-08-03T11:11:05.975+0000] {services_utils.py:286} INFO - Selected dataset part: "default"
+[2025-08-03T11:11:10.338+0000] {download_zarr.py:169} INFO - Starting download. Please wait...
+[2025-08-03T11:11:10.559+0000] {logging_mixin.py:188} WARNING -   0%|          | 0/111 [00:00<?, ?it/s]
+[2025-08-03T11:11:13.189+0000] {logging_mixin.py:188} WARNING -   1%|          | 1/111 [00:02<04:49,  2.63s/it]
+[2025-08-03T11:11:15.165+0000] {logging_mixin.py:188} WARNING -   7%|7         | 8/111 [00:04<00:51,  2.02it/s]
+[2025-08-03T11:11:16.272+0000] {logging_mixin.py:188} WARNING -  10%|9         | 11/111 [00:05<00:45,  2.22it/s]
+[2025-08-03T11:11:17.467+0000] {logging_mixin.py:188} WARNING -  21%|##        | 23/111 [00:06<00:18,  4.65it/s]
+[2025-08-03T11:11:21.092+0000] {logging_mixin.py:188} WARNING -  27%|##7       | 30/111 [00:10<00:26,  3.09it/s]
+[2025-08-03T11:11:21.654+0000] {logging_mixin.py:188} WARNING -  30%|##9       | 33/111 [00:11<00:23,  3.34it/s]
+[2025-08-03T11:11:21.800+0000] {logging_mixin.py:188} WARNING -  36%|###6      | 40/111 [00:11<00:13,  5.14it/s]
+[2025-08-03T11:11:26.027+0000] {logging_mixin.py:188} WARNING -  47%|####6     | 52/111 [00:15<00:15,  3.70it/s]
+[2025-08-03T11:11:26.646+0000] {logging_mixin.py:188} WARNING -  53%|#####3    | 59/111 [00:16<00:11,  4.58it/s]
+[2025-08-03T11:11:26.893+0000] {logging_mixin.py:188} WARNING -  61%|######1   | 68/111 [00:16<00:06,  6.55it/s]
+[2025-08-03T11:11:31.406+0000] {logging_mixin.py:188} WARNING -  67%|######6   | 74/111 [00:20<00:11,  3.33it/s]
+[2025-08-03T11:11:31.904+0000] {logging_mixin.py:188} WARNING -  73%|#######2  | 81/111 [00:21<00:07,  4.28it/s]
+[2025-08-03T11:11:32.063+0000] {logging_mixin.py:188} WARNING -  85%|########4 | 94/111 [00:21<00:02,  7.29it/s]
+[2025-08-03T11:11:36.158+0000] {logging_mixin.py:188} WARNING -  88%|########8 | 98/111 [00:25<00:03,  3.57it/s]
+[2025-08-03T11:11:36.901+0000] {logging_mixin.py:188} WARNING -  95%|#########4| 105/111 [00:26<00:01,  4.35it/s]
+[2025-08-03T11:11:36.915+0000] {logging_mixin.py:188} WARNING - 100%|##########| 111/111 [00:26<00:00,  4.21it/s]
+[2025-08-03T11:11:36.924+0000] {download_zarr.py:185} INFO - Successfully downloaded to /opt/***/nc/thetao/rayong_1_thetao.nc
+[2025-08-03T11:11:36.926+0000] {logging_mixin.py:188} INFO - ✅ Downloaded thetao: /opt/***/nc/thetao/rayong_1_thetao.nc
+[2025-08-03T11:11:36.928+0000] {deprecated_options.py:61} WARNING - 'force_download' has been deprecated.
+[2025-08-03T11:11:40.528+0000] {services_utils.py:262} INFO - Selected dataset version: "202406"
+[2025-08-03T11:11:40.529+0000] {services_utils.py:286} INFO - Selected dataset part: "default"
+[2025-08-03T11:11:44.674+0000] {download_zarr.py:169} INFO - Starting download. Please wait...
+[2025-08-03T11:11:44.917+0000] {logging_mixin.py:188} WARNING -   0%|          | 0/111 [00:00<?, ?it/s]
+[2025-08-03T11:11:47.489+0000] {logging_mixin.py:188} WARNING -   1%|          | 1/111 [00:02<04:42,  2.57s/it]
+[2025-08-03T11:11:49.357+0000] {logging_mixin.py:188} WARNING -   7%|7         | 8/111 [00:04<00:49,  2.10it/s]
+[2025-08-03T11:11:50.745+0000] {logging_mixin.py:188} WARNING -  10%|9         | 11/111 [00:05<00:47,  2.12it/s]
+[2025-08-03T11:11:51.740+0000] {logging_mixin.py:188} WARNING -  21%|##        | 23/111 [00:06<00:18,  4.75it/s]
+[2025-08-03T11:11:55.960+0000] {logging_mixin.py:188} WARNING -  27%|##7       | 30/111 [00:11<00:28,  2.85it/s]
+[2025-08-03T11:11:56.412+0000] {logging_mixin.py:188} WARNING -  30%|##9       | 33/111 [00:11<00:24,  3.17it/s]
+[2025-08-03T11:11:57.795+0000] {logging_mixin.py:188} WARNING -  36%|###6      | 40/111 [00:12<00:19,  3.69it/s]
+[2025-08-03T11:12:03.824+0000] {logging_mixin.py:188} WARNING -  47%|####6     | 52/111 [00:18<00:22,  2.62it/s]
+[2025-08-03T11:12:04.035+0000] {logging_mixin.py:188} WARNING -  55%|#####4    | 61/111 [00:19<00:13,  3.84it/s]
+[2025-08-03T11:12:04.595+0000] {logging_mixin.py:188} WARNING -  60%|######    | 67/111 [00:19<00:09,  4.56it/s]
+[2025-08-03T11:12:08.531+0000] {logging_mixin.py:188} WARNING -  67%|######6   | 74/111 [00:23<00:11,  3.14it/s]
+[2025-08-03T11:12:08.815+0000] {logging_mixin.py:188} WARNING -  75%|#######4  | 83/111 [00:23<00:06,  4.56it/s]
+[2025-08-03T11:12:09.860+0000] {logging_mixin.py:188} WARNING -  81%|########1 | 90/111 [00:24<00:04,  5.01it/s]
+[2025-08-03T11:12:13.655+0000] {logging_mixin.py:188} WARNING -  86%|########6 | 96/111 [00:28<00:04,  3.23it/s]
+[2025-08-03T11:12:13.783+0000] {logging_mixin.py:188} WARNING -  93%|#########2| 103/111 [00:28<00:01,  4.48it/s]
+[2025-08-03T11:12:14.563+0000] {logging_mixin.py:188} WARNING -  95%|#########5| 106/111 [00:29<00:01,  4.37it/s]
+[2025-08-03T11:12:14.582+0000] {logging_mixin.py:188} WARNING - 100%|##########| 111/111 [00:29<00:00,  3.74it/s]
+[2025-08-03T11:12:14.595+0000] {download_zarr.py:185} INFO - Successfully downloaded to /opt/***/nc/thetao/rayong_2_thetao.nc
+[2025-08-03T11:12:14.598+0000] {logging_mixin.py:188} INFO - ✅ Downloaded thetao: /opt/***/nc/thetao/rayong_2_thetao.nc
+[2025-08-03T11:12:14.600+0000] {deprecated_options.py:61} WARNING - 'force_download' has been deprecated.
+[2025-08-03T11:12:18.128+0000] {services_utils.py:262} INFO - Selected dataset version: "202406"
+[2025-08-03T11:12:18.129+0000] {services_utils.py:286} INFO - Selected dataset part: "default"
+[2025-08-03T11:12:21.809+0000] {download_zarr.py:169} INFO - Starting download. Please wait...
+[2025-08-03T11:12:21.964+0000] {logging_mixin.py:188} WARNING -   0%|          | 0/111 [00:00<?, ?it/s]
+[2025-08-03T11:12:24.617+0000] {logging_mixin.py:188} WARNING -   1%|          | 1/111 [00:02<04:51,  2.65s/it]
+[2025-08-03T11:12:24.775+0000] {logging_mixin.py:188} WARNING -   5%|5         | 6/111 [00:02<00:37,  2.83it/s]
+[2025-08-03T11:12:26.422+0000] {logging_mixin.py:188} WARNING -   7%|7         | 8/111 [00:04<00:52,  1.96it/s]
+[2025-08-03T11:12:27.501+0000] {logging_mixin.py:188} WARNING -  10%|9         | 11/111 [00:05<00:44,  2.23it/s]
+[2025-08-03T11:12:29.039+0000] {logging_mixin.py:188} WARNING -  21%|##        | 23/111 [00:07<00:19,  4.49it/s]
+[2025-08-03T11:12:31.780+0000] {logging_mixin.py:188} WARNING -  27%|##7       | 30/111 [00:09<00:23,  3.51it/s]
+[2025-08-03T11:12:33.387+0000] {logging_mixin.py:188} WARNING -  30%|##9       | 33/111 [00:11<00:25,  3.02it/s]
+[2025-08-03T11:12:33.501+0000] {logging_mixin.py:188} WARNING -  34%|###4      | 38/111 [00:11<00:17,  4.22it/s]
+[2025-08-03T11:12:34.199+0000] {logging_mixin.py:188} WARNING -  36%|###6      | 40/111 [00:12<00:18,  3.94it/s]
+[2025-08-03T11:12:37.170+0000] {logging_mixin.py:188} WARNING -  47%|####6     | 52/111 [00:15<00:14,  4.00it/s]
+[2025-08-03T11:12:37.978+0000] {logging_mixin.py:188} WARNING -  55%|#####4    | 61/111 [00:16<00:09,  5.26it/s]
+[2025-08-03T11:12:38.835+0000] {logging_mixin.py:188} WARNING -  60%|######    | 67/111 [00:16<00:07,  5.63it/s]
+[2025-08-03T11:12:43.159+0000] {logging_mixin.py:188} WARNING -  67%|######6   | 74/111 [00:21<00:11,  3.21it/s]
+[2025-08-03T11:12:43.605+0000] {logging_mixin.py:188} WARNING -  69%|######9   | 77/111 [00:21<00:09,  3.49it/s]
+[2025-08-03T11:12:43.739+0000] {logging_mixin.py:188} WARNING -  74%|#######3  | 82/111 [00:21<00:06,  4.64it/s]
+[2025-08-03T11:12:47.448+0000] {logging_mixin.py:188} WARNING -  86%|########6 | 96/111 [00:25<00:03,  4.14it/s]
+[2025-08-03T11:12:48.545+0000] {logging_mixin.py:188} WARNING -  95%|#########4| 105/111 [00:26<00:01,  4.94it/s]
+[2025-08-03T11:12:48.573+0000] {logging_mixin.py:188} WARNING - 100%|##########| 111/111 [00:26<00:00,  4.17it/s]
+[2025-08-03T11:12:48.582+0000] {download_zarr.py:185} INFO - Successfully downloaded to /opt/***/nc/thetao/chanthaburi_1_thetao.nc
+[2025-08-03T11:12:48.584+0000] {logging_mixin.py:188} INFO - ✅ Downloaded thetao: /opt/***/nc/thetao/chanthaburi_1_thetao.nc
+[2025-08-03T11:12:48.585+0000] {deprecated_options.py:61} WARNING - 'force_download' has been deprecated.
+[2025-08-03T11:12:52.036+0000] {services_utils.py:262} INFO - Selected dataset version: "202406"
+[2025-08-03T11:12:52.038+0000] {services_utils.py:286} INFO - Selected dataset part: "default"
+[2025-08-03T11:12:56.303+0000] {download_zarr.py:169} INFO - Starting download. Please wait...
+[2025-08-03T11:12:56.560+0000] {logging_mixin.py:188} WARNING -   0%|          | 0/111 [00:00<?, ?it/s]
+[2025-08-03T11:12:59.143+0000] {logging_mixin.py:188} WARNING -   1%|          | 1/111 [00:02<04:43,  2.58s/it]
+[2025-08-03T11:12:59.483+0000] {logging_mixin.py:188} WARNING -   5%|5         | 6/111 [00:02<00:39,  2.65it/s]
+[2025-08-03T11:13:00.986+0000] {logging_mixin.py:188} WARNING -   7%|7         | 8/111 [00:04<00:51,  1.99it/s]
+[2025-08-03T11:13:02.150+0000] {logging_mixin.py:188} WARNING -  10%|9         | 11/111 [00:05<00:45,  2.20it/s]
+[2025-08-03T11:13:02.257+0000] {logging_mixin.py:188} WARNING -  19%|#8        | 21/111 [00:05<00:14,  6.28it/s]
+[2025-08-03T11:13:03.736+0000] {logging_mixin.py:188} WARNING -  23%|##2       | 25/111 [00:07<00:18,  4.60it/s]
+[2025-08-03T11:13:03.909+0000] {logging_mixin.py:188} WARNING -  25%|##5       | 28/111 [00:07<00:15,  5.53it/s]
+[2025-08-03T11:13:06.811+0000] {logging_mixin.py:188} WARNING -  28%|##7       | 31/111 [00:10<00:29,  2.67it/s]
+[2025-08-03T11:13:07.940+0000] {logging_mixin.py:188} WARNING -  30%|##9       | 33/111 [00:11<00:31,  2.44it/s]
+[2025-08-03T11:13:08.068+0000] {logging_mixin.py:188} WARNING -  39%|###8      | 43/111 [00:11<00:12,  5.51it/s]
+[2025-08-03T11:13:08.212+0000] {logging_mixin.py:188} WARNING -  42%|####2     | 47/111 [00:11<00:09,  6.87it/s]
+[2025-08-03T11:13:12.288+0000] {logging_mixin.py:188} WARNING -  47%|####6     | 52/111 [00:15<00:20,  2.85it/s]
+[2025-08-03T11:13:12.769+0000] {logging_mixin.py:188} WARNING -  51%|#####1    | 57/111 [00:16<00:14,  3.66it/s]
+[2025-08-03T11:13:13.290+0000] {logging_mixin.py:188} WARNING -  61%|######1   | 68/111 [00:16<00:07,  6.14it/s]
+[2025-08-03T11:13:13.648+0000] {logging_mixin.py:188} WARNING -  63%|######3   | 70/111 [00:17<00:06,  6.07it/s]
+[2025-08-03T11:13:13.897+0000] {logging_mixin.py:188} WARNING -  65%|######4   | 72/111 [00:17<00:06,  6.28it/s]
+[2025-08-03T11:13:18.472+0000] {logging_mixin.py:188} WARNING -  67%|######6   | 74/111 [00:21<00:18,  1.96it/s]
+[2025-08-03T11:13:18.701+0000] {logging_mixin.py:188} WARNING -  71%|#######1  | 79/111 [00:22<00:10,  2.96it/s]
+[2025-08-03T11:13:19.209+0000] {logging_mixin.py:188} WARNING -  73%|#######2  | 81/111 [00:22<00:09,  3.09it/s]
+[2025-08-03T11:13:19.325+0000] {logging_mixin.py:188} WARNING -  83%|########2 | 92/111 [00:22<00:02,  7.03it/s]
+[2025-08-03T11:13:23.375+0000] {logging_mixin.py:188} WARNING -  86%|########6 | 96/111 [00:26<00:05,  2.91it/s]
+[2025-08-03T11:13:23.602+0000] {logging_mixin.py:188} WARNING -  93%|#########2| 103/111 [00:27<00:01,  4.36it/s]
+[2025-08-03T11:13:24.482+0000] {logging_mixin.py:188} WARNING -  95%|#########5| 106/111 [00:27<00:01,  4.14it/s]
+[2025-08-03T11:13:24.550+0000] {logging_mixin.py:188} WARNING - 100%|##########| 111/111 [00:27<00:00,  3.97it/s]
+[2025-08-03T11:13:24.562+0000] {download_zarr.py:185} INFO - Successfully downloaded to /opt/***/nc/thetao/trat_1_thetao.nc
+[2025-08-03T11:13:24.563+0000] {logging_mixin.py:188} INFO - ✅ Downloaded thetao: /opt/***/nc/thetao/trat_1_thetao.nc
+[2025-08-03T11:13:24.564+0000] {python.py:201} INFO - Done. Returned value was: None
+[2025-08-03T11:13:24.580+0000] {taskinstance.py:1138} INFO - Marking task as SUCCESS. dag_id=marine_data_etl_dag, task_id=thetao_etl.download_thetao, execution_date=20250803T110953, start_date=20250803T111101, end_date=20250803T111324
+[2025-08-03T11:13:24.639+0000] {local_task_job_runner.py:234} INFO - Task exited with return code 0
+[2025-08-03T11:13:24.841+0000] {taskinstance.py:3280} INFO - 1 downstream tasks scheduled from follow-on schedule check

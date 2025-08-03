@@ -1,0 +1,111 @@
+[2025-08-03T11:22:41.890+0000] {taskinstance.py:1956} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: marine_data_etl_dag.so_etl.download_so manual__2025-08-03T11:09:53+00:00 [queued]>
+[2025-08-03T11:22:41.904+0000] {taskinstance.py:1956} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: marine_data_etl_dag.so_etl.download_so manual__2025-08-03T11:09:53+00:00 [queued]>
+[2025-08-03T11:22:41.905+0000] {taskinstance.py:2170} INFO - Starting attempt 1 of 1
+[2025-08-03T11:22:41.926+0000] {taskinstance.py:2191} INFO - Executing <Task(PythonOperator): so_etl.download_so> on 2025-08-03 11:09:53+00:00
+[2025-08-03T11:22:41.933+0000] {standard_task_runner.py:60} INFO - Started process 181 to run task
+[2025-08-03T11:22:41.938+0000] {standard_task_runner.py:87} INFO - Running: ['***', 'tasks', 'run', 'marine_data_etl_dag', 'so_etl.download_so', 'manual__2025-08-03T11:09:53+00:00', '--job-id', '263', '--raw', '--subdir', 'DAGS_FOLDER/marine_data_etl_dag.py', '--cfg-path', '/tmp/tmpvkwyz354']
+[2025-08-03T11:22:41.943+0000] {standard_task_runner.py:88} INFO - Job 263: Subtask so_etl.download_so
+[2025-08-03T11:22:42.020+0000] {task_command.py:423} INFO - Running <TaskInstance: marine_data_etl_dag.so_etl.download_so manual__2025-08-03T11:09:53+00:00 [running]> on host fce0ae18e39f
+[2025-08-03T11:22:42.319+0000] {taskinstance.py:2480} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='marine_data_etl_dag' AIRFLOW_CTX_TASK_ID='so_etl.download_so' AIRFLOW_CTX_EXECUTION_DATE='2025-08-03T11:09:53+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2025-08-03T11:09:53+00:00'
+[2025-08-03T11:22:42.324+0000] {deprecated_options.py:61} WARNING - 'force_download' has been deprecated.
+[2025-08-03T11:22:45.956+0000] {services_utils.py:262} INFO - Selected dataset version: "202406"
+[2025-08-03T11:22:45.957+0000] {services_utils.py:286} INFO - Selected dataset part: "default"
+[2025-08-03T11:22:50.190+0000] {download_zarr.py:169} INFO - Starting download. Please wait...
+[2025-08-03T11:22:50.399+0000] {logging_mixin.py:188} WARNING -   0%|          | 0/111 [00:00<?, ?it/s]
+[2025-08-03T11:22:52.954+0000] {logging_mixin.py:188} WARNING -   1%|          | 1/111 [00:02<04:40,  2.55s/it]
+[2025-08-03T11:22:53.154+0000] {logging_mixin.py:188} WARNING -   5%|5         | 6/111 [00:02<00:36,  2.87it/s]
+[2025-08-03T11:22:55.002+0000] {logging_mixin.py:188} WARNING -   7%|7         | 8/111 [00:04<00:55,  1.85it/s]
+[2025-08-03T11:22:56.024+0000] {logging_mixin.py:188} WARNING -  10%|9         | 11/111 [00:05<00:45,  2.19it/s]
+[2025-08-03T11:22:57.361+0000] {logging_mixin.py:188} WARNING -  21%|##        | 23/111 [00:06<00:18,  4.68it/s]
+[2025-08-03T11:23:00.455+0000] {logging_mixin.py:188} WARNING -  27%|##7       | 30/111 [00:10<00:24,  3.35it/s]
+[2025-08-03T11:23:01.331+0000] {logging_mixin.py:188} WARNING -  30%|##9       | 33/111 [00:10<00:23,  3.37it/s]
+[2025-08-03T11:23:01.520+0000] {logging_mixin.py:188} WARNING -  41%|####      | 45/111 [00:11<00:10,  6.55it/s]
+[2025-08-03T11:23:05.209+0000] {logging_mixin.py:188} WARNING -  47%|####6     | 52/111 [00:14<00:15,  3.78it/s]
+[2025-08-03T11:23:05.699+0000] {logging_mixin.py:188} WARNING -  55%|#####4    | 61/111 [00:15<00:09,  5.26it/s]
+[2025-08-03T11:23:06.007+0000] {logging_mixin.py:188} WARNING -  61%|######1   | 68/111 [00:15<00:06,  6.72it/s]
+[2025-08-03T11:23:10.138+0000] {logging_mixin.py:188} WARNING -  67%|######6   | 74/111 [00:19<00:10,  3.48it/s]
+[2025-08-03T11:23:10.551+0000] {logging_mixin.py:188} WARNING -  73%|#######2  | 81/111 [00:20<00:06,  4.57it/s]
+[2025-08-03T11:23:10.660+0000] {logging_mixin.py:188} WARNING -  81%|########1 | 90/111 [00:20<00:03,  6.87it/s]
+[2025-08-03T11:23:15.834+0000] {logging_mixin.py:188} WARNING -  86%|########6 | 96/111 [00:25<00:04,  3.06it/s]
+[2025-08-03T11:23:16.328+0000] {logging_mixin.py:188} WARNING -  89%|########9 | 99/111 [00:25<00:03,  3.31it/s]
+[2025-08-03T11:23:16.360+0000] {logging_mixin.py:188} WARNING - 100%|##########| 111/111 [00:25<00:00,  4.28it/s]
+[2025-08-03T11:23:16.374+0000] {download_zarr.py:185} INFO - Successfully downloaded to /opt/***/nc/salinity/rayong_1_salinity.nc
+[2025-08-03T11:23:16.376+0000] {logging_mixin.py:188} INFO - ✅ Downloaded salinity: /opt/***/nc/salinity/rayong_1_salinity.nc
+[2025-08-03T11:23:16.381+0000] {deprecated_options.py:61} WARNING - 'force_download' has been deprecated.
+[2025-08-03T11:23:19.890+0000] {services_utils.py:262} INFO - Selected dataset version: "202406"
+[2025-08-03T11:23:19.891+0000] {services_utils.py:286} INFO - Selected dataset part: "default"
+[2025-08-03T11:23:23.816+0000] {download_zarr.py:169} INFO - Starting download. Please wait...
+[2025-08-03T11:23:23.998+0000] {logging_mixin.py:188} WARNING -   0%|          | 0/111 [00:00<?, ?it/s]
+[2025-08-03T11:23:26.554+0000] {logging_mixin.py:188} WARNING -   1%|          | 1/111 [00:02<04:40,  2.55s/it]
+[2025-08-03T11:23:28.364+0000] {logging_mixin.py:188} WARNING -   7%|7         | 8/111 [00:04<00:48,  2.14it/s]
+[2025-08-03T11:23:29.503+0000] {logging_mixin.py:188} WARNING -  10%|9         | 11/111 [00:05<00:43,  2.29it/s]
+[2025-08-03T11:23:30.682+0000] {logging_mixin.py:188} WARNING -  21%|##        | 23/111 [00:06<00:18,  4.78it/s]
+[2025-08-03T11:23:33.712+0000] {logging_mixin.py:188} WARNING -  27%|##7       | 30/111 [00:09<00:23,  3.46it/s]
+[2025-08-03T11:23:34.500+0000] {logging_mixin.py:188} WARNING -  30%|##9       | 33/111 [00:10<00:22,  3.51it/s]
+[2025-08-03T11:23:34.859+0000] {logging_mixin.py:188} WARNING -  41%|####      | 45/111 [00:10<00:10,  6.43it/s]
+[2025-08-03T11:23:39.010+0000] {logging_mixin.py:188} WARNING -  47%|####6     | 52/111 [00:15<00:16,  3.50it/s]
+[2025-08-03T11:23:39.120+0000] {logging_mixin.py:188} WARNING -  53%|#####3    | 59/111 [00:15<00:10,  4.88it/s]
+[2025-08-03T11:23:39.873+0000] {logging_mixin.py:188} WARNING -  56%|#####5    | 62/111 [00:15<00:10,  4.71it/s]
+[2025-08-03T11:23:44.050+0000] {logging_mixin.py:188} WARNING -  67%|######6   | 74/111 [00:20<00:10,  3.62it/s]
+[2025-08-03T11:23:44.219+0000] {logging_mixin.py:188} WARNING -  75%|#######4  | 83/111 [00:20<00:05,  5.27it/s]
+[2025-08-03T11:23:44.687+0000] {logging_mixin.py:188} WARNING -  81%|########1 | 90/111 [00:20<00:03,  6.39it/s]
+[2025-08-03T11:23:48.208+0000] {logging_mixin.py:188} WARNING -  86%|########6 | 96/111 [00:24<00:03,  3.79it/s]
+[2025-08-03T11:23:49.358+0000] {logging_mixin.py:188} WARNING -  95%|#########4| 105/111 [00:25<00:01,  4.62it/s]
+[2025-08-03T11:23:49.375+0000] {logging_mixin.py:188} WARNING - 100%|##########| 111/111 [00:25<00:00,  4.37it/s]
+[2025-08-03T11:23:49.383+0000] {download_zarr.py:185} INFO - Successfully downloaded to /opt/***/nc/salinity/rayong_2_salinity.nc
+[2025-08-03T11:23:49.386+0000] {logging_mixin.py:188} INFO - ✅ Downloaded salinity: /opt/***/nc/salinity/rayong_2_salinity.nc
+[2025-08-03T11:23:49.388+0000] {deprecated_options.py:61} WARNING - 'force_download' has been deprecated.
+[2025-08-03T11:23:52.834+0000] {services_utils.py:262} INFO - Selected dataset version: "202406"
+[2025-08-03T11:23:52.835+0000] {services_utils.py:286} INFO - Selected dataset part: "default"
+[2025-08-03T11:23:56.679+0000] {download_zarr.py:169} INFO - Starting download. Please wait...
+[2025-08-03T11:23:56.866+0000] {logging_mixin.py:188} WARNING -   0%|          | 0/111 [00:00<?, ?it/s]
+[2025-08-03T11:23:59.477+0000] {logging_mixin.py:188} WARNING -   1%|          | 1/111 [00:02<04:47,  2.61s/it]
+[2025-08-03T11:23:59.617+0000] {logging_mixin.py:188} WARNING -   5%|5         | 6/111 [00:02<00:36,  2.90it/s]
+[2025-08-03T11:24:01.285+0000] {logging_mixin.py:188} WARNING -   8%|8         | 9/111 [00:04<00:44,  2.30it/s]
+[2025-08-03T11:24:02.380+0000] {logging_mixin.py:188} WARNING -  10%|9         | 11/111 [00:05<00:46,  2.14it/s]
+[2025-08-03T11:24:03.807+0000] {logging_mixin.py:188} WARNING -  21%|##        | 23/111 [00:06<00:19,  4.56it/s]
+[2025-08-03T11:24:06.722+0000] {logging_mixin.py:188} WARNING -  27%|##7       | 30/111 [00:09<00:23,  3.42it/s]
+[2025-08-03T11:24:07.868+0000] {logging_mixin.py:188} WARNING -  30%|##9       | 33/111 [00:11<00:24,  3.23it/s]
+[2025-08-03T11:24:08.091+0000] {logging_mixin.py:188} WARNING -  41%|####      | 45/111 [00:11<00:10,  6.27it/s]
+[2025-08-03T11:24:11.643+0000] {logging_mixin.py:188} WARNING -  47%|####6     | 52/111 [00:14<00:15,  3.79it/s]
+[2025-08-03T11:24:12.181+0000] {logging_mixin.py:188} WARNING -  55%|#####4    | 61/111 [00:15<00:09,  5.22it/s]
+[2025-08-03T11:24:12.282+0000] {logging_mixin.py:188} WARNING -  62%|######2   | 69/111 [00:15<00:05,  7.36it/s]
+[2025-08-03T11:24:16.617+0000] {logging_mixin.py:188} WARNING -  67%|######6   | 74/111 [00:19<00:10,  3.39it/s]
+[2025-08-03T11:24:16.884+0000] {logging_mixin.py:188} WARNING -  71%|#######1  | 79/111 [00:20<00:07,  4.21it/s]
+[2025-08-03T11:24:17.266+0000] {logging_mixin.py:188} WARNING -  74%|#######3  | 82/111 [00:20<00:06,  4.57it/s]
+[2025-08-03T11:24:17.536+0000] {logging_mixin.py:188} WARNING -  81%|########1 | 90/111 [00:20<00:03,  6.83it/s]
+[2025-08-03T11:24:21.716+0000] {logging_mixin.py:188} WARNING -  86%|########6 | 96/111 [00:24<00:04,  3.24it/s]
+[2025-08-03T11:24:23.911+0000] {logging_mixin.py:188} WARNING -  95%|#########4| 105/111 [00:27<00:01,  3.52it/s]
+[2025-08-03T11:24:23.996+0000] {logging_mixin.py:188} WARNING - 100%|##########| 111/111 [00:27<00:00,  4.09it/s]
+[2025-08-03T11:24:24.005+0000] {download_zarr.py:185} INFO - Successfully downloaded to /opt/***/nc/salinity/chanthaburi_1_salinity.nc
+[2025-08-03T11:24:24.008+0000] {logging_mixin.py:188} INFO - ✅ Downloaded salinity: /opt/***/nc/salinity/chanthaburi_1_salinity.nc
+[2025-08-03T11:24:24.011+0000] {deprecated_options.py:61} WARNING - 'force_download' has been deprecated.
+[2025-08-03T11:24:27.465+0000] {services_utils.py:262} INFO - Selected dataset version: "202406"
+[2025-08-03T11:24:27.467+0000] {services_utils.py:286} INFO - Selected dataset part: "default"
+[2025-08-03T11:24:31.168+0000] {download_zarr.py:169} INFO - Starting download. Please wait...
+[2025-08-03T11:24:31.322+0000] {logging_mixin.py:188} WARNING -   0%|          | 0/111 [00:00<?, ?it/s]
+[2025-08-03T11:24:34.002+0000] {logging_mixin.py:188} WARNING -   1%|          | 1/111 [00:02<04:54,  2.68s/it]
+[2025-08-03T11:24:34.259+0000] {logging_mixin.py:188} WARNING -   5%|5         | 6/111 [00:02<00:39,  2.67it/s]
+[2025-08-03T11:24:35.771+0000] {logging_mixin.py:188} WARNING -   7%|7         | 8/111 [00:04<00:51,  1.99it/s]
+[2025-08-03T11:24:36.879+0000] {logging_mixin.py:188} WARNING -  10%|9         | 11/111 [00:05<00:44,  2.24it/s]
+[2025-08-03T11:24:37.040+0000] {logging_mixin.py:188} WARNING -  19%|#8        | 21/111 [00:05<00:14,  6.24it/s]
+[2025-08-03T11:24:38.596+0000] {logging_mixin.py:188} WARNING -  22%|##1       | 24/111 [00:07<00:20,  4.17it/s]
+[2025-08-03T11:24:41.247+0000] {logging_mixin.py:188} WARNING -  27%|##7       | 30/111 [00:09<00:25,  3.14it/s]
+[2025-08-03T11:24:42.047+0000] {logging_mixin.py:188} WARNING -  30%|##9       | 33/111 [00:10<00:23,  3.26it/s]
+[2025-08-03T11:24:42.173+0000] {logging_mixin.py:188} WARNING -  39%|###8      | 43/111 [00:10<00:10,  6.35it/s]
+[2025-08-03T11:24:42.902+0000] {logging_mixin.py:188} WARNING -  42%|####2     | 47/111 [00:11<00:10,  6.14it/s]
+[2025-08-03T11:24:46.198+0000] {logging_mixin.py:188} WARNING -  47%|####6     | 52/111 [00:14<00:18,  3.28it/s]
+[2025-08-03T11:24:46.785+0000] {logging_mixin.py:188} WARNING -  55%|#####4    | 61/111 [00:15<00:10,  4.92it/s]
+[2025-08-03T11:24:47.309+0000] {logging_mixin.py:188} WARNING -  60%|######    | 67/111 [00:15<00:07,  5.88it/s]
+[2025-08-03T11:24:51.066+0000] {logging_mixin.py:188} WARNING -  67%|######6   | 74/111 [00:19<00:10,  3.46it/s]
+[2025-08-03T11:24:51.465+0000] {logging_mixin.py:188} WARNING -  75%|#######4  | 83/111 [00:20<00:05,  5.06it/s]
+[2025-08-03T11:24:51.655+0000] {logging_mixin.py:188} WARNING -  80%|########  | 89/111 [00:20<00:03,  6.49it/s]
+[2025-08-03T11:24:56.177+0000] {logging_mixin.py:188} WARNING -  86%|########6 | 96/111 [00:24<00:04,  3.29it/s]
+[2025-08-03T11:24:56.692+0000] {logging_mixin.py:188} WARNING -  95%|#########4| 105/111 [00:25<00:01,  4.64it/s]
+[2025-08-03T11:24:56.750+0000] {logging_mixin.py:188} WARNING - 100%|##########| 111/111 [00:25<00:00,  4.37it/s]
+[2025-08-03T11:24:56.761+0000] {download_zarr.py:185} INFO - Successfully downloaded to /opt/***/nc/salinity/trat_1_salinity.nc
+[2025-08-03T11:24:56.764+0000] {logging_mixin.py:188} INFO - ✅ Downloaded salinity: /opt/***/nc/salinity/trat_1_salinity.nc
+[2025-08-03T11:24:56.764+0000] {python.py:201} INFO - Done. Returned value was: None
+[2025-08-03T11:24:56.780+0000] {taskinstance.py:1138} INFO - Marking task as SUCCESS. dag_id=marine_data_etl_dag, task_id=so_etl.download_so, execution_date=20250803T110953, start_date=20250803T112241, end_date=20250803T112456
+[2025-08-03T11:24:56.833+0000] {local_task_job_runner.py:234} INFO - Task exited with return code 0
+[2025-08-03T11:24:57.013+0000] {taskinstance.py:3280} INFO - 1 downstream tasks scheduled from follow-on schedule check

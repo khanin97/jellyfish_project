@@ -1,0 +1,13 @@
+[2025-08-02T13:28:06.782+0000] {taskinstance.py:1956} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: marine_data_etl_dag.zooplankton_etl.convert_zoo manual__2025-08-02T13:26:38.090117+00:00 [queued]>
+[2025-08-02T13:28:06.800+0000] {taskinstance.py:1956} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: marine_data_etl_dag.zooplankton_etl.convert_zoo manual__2025-08-02T13:26:38.090117+00:00 [queued]>
+[2025-08-02T13:28:06.801+0000] {taskinstance.py:2170} INFO - Starting attempt 1 of 1
+[2025-08-02T13:28:06.830+0000] {taskinstance.py:2191} INFO - Executing <Task(PythonOperator): zooplankton_etl.convert_zoo> on 2025-08-02 13:26:38.090117+00:00
+[2025-08-02T13:28:06.839+0000] {standard_task_runner.py:60} INFO - Started process 468 to run task
+[2025-08-02T13:28:06.845+0000] {standard_task_runner.py:87} INFO - Running: ['***', 'tasks', 'run', 'marine_data_etl_dag', 'zooplankton_etl.convert_zoo', 'manual__2025-08-02T13:26:38.090117+00:00', '--job-id', '104', '--raw', '--subdir', 'DAGS_FOLDER/marine_data_etl_dag.py', '--cfg-path', '/tmp/tmpfxje1nr9']
+[2025-08-02T13:28:06.850+0000] {standard_task_runner.py:88} INFO - Job 104: Subtask zooplankton_etl.convert_zoo
+[2025-08-02T13:28:06.921+0000] {task_command.py:423} INFO - Running <TaskInstance: marine_data_etl_dag.zooplankton_etl.convert_zoo manual__2025-08-02T13:26:38.090117+00:00 [running]> on host 19821aecac76
+[2025-08-02T13:28:07.262+0000] {taskinstance.py:2480} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='marine_data_etl_dag' AIRFLOW_CTX_TASK_ID='zooplankton_etl.convert_zoo' AIRFLOW_CTX_EXECUTION_DATE='2025-08-02T13:26:38.090117+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2025-08-02T13:26:38.090117+00:00'
+[2025-08-02T13:28:07.270+0000] {python.py:201} INFO - Done. Returned value was: None
+[2025-08-02T13:28:07.282+0000] {taskinstance.py:1138} INFO - Marking task as SUCCESS. dag_id=marine_data_etl_dag, task_id=zooplankton_etl.convert_zoo, execution_date=20250802T132638, start_date=20250802T132806, end_date=20250802T132807
+[2025-08-02T13:28:07.341+0000] {local_task_job_runner.py:234} INFO - Task exited with return code 0
+[2025-08-02T13:28:07.386+0000] {taskinstance.py:3280} INFO - 1 downstream tasks scheduled from follow-on schedule check

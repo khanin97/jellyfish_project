@@ -1,0 +1,37 @@
+[2025-08-03T05:11:44.676+0000] {taskinstance.py:1956} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: marine_data_etl_dag.so_etl.download_so manual__2025-08-03T05:10:24.968527+00:00 [queued]>
+[2025-08-03T05:11:44.693+0000] {taskinstance.py:1956} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: marine_data_etl_dag.so_etl.download_so manual__2025-08-03T05:10:24.968527+00:00 [queued]>
+[2025-08-03T05:11:44.694+0000] {taskinstance.py:2170} INFO - Starting attempt 1 of 1
+[2025-08-03T05:11:44.726+0000] {taskinstance.py:2191} INFO - Executing <Task(PythonOperator): so_etl.download_so> on 2025-08-03 05:10:24.968527+00:00
+[2025-08-03T05:11:44.737+0000] {standard_task_runner.py:60} INFO - Started process 379 to run task
+[2025-08-03T05:11:44.743+0000] {standard_task_runner.py:87} INFO - Running: ['***', 'tasks', 'run', 'marine_data_etl_dag', 'so_etl.download_so', 'manual__2025-08-03T05:10:24.968527+00:00', '--job-id', '173', '--raw', '--subdir', 'DAGS_FOLDER/marine_data_etl_dag.py', '--cfg-path', '/tmp/tmp99hldb7c']
+[2025-08-03T05:11:44.753+0000] {standard_task_runner.py:88} INFO - Job 173: Subtask so_etl.download_so
+[2025-08-03T05:11:44.831+0000] {task_command.py:423} INFO - Running <TaskInstance: marine_data_etl_dag.so_etl.download_so manual__2025-08-03T05:10:24.968527+00:00 [running]> on host 19821aecac76
+[2025-08-03T05:11:45.163+0000] {taskinstance.py:2480} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='marine_data_etl_dag' AIRFLOW_CTX_TASK_ID='so_etl.download_so' AIRFLOW_CTX_EXECUTION_DATE='2025-08-03T05:10:24.968527+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2025-08-03T05:10:24.968527+00:00'
+[2025-08-03T05:11:45.174+0000] {deprecated_options.py:61} WARNING - 'force_download' has been deprecated.
+[2025-08-03T05:11:45.912+0000] {credentials_utils.py:181} INFO - Downloading Copernicus Marine data requires a Copernicus Marine username and password, sign up for free at: https://data.marine.copernicus.eu/register
+[2025-08-03T05:11:45.915+0000] {logging_mixin.py:188} INFO - Copernicus Marine username:
+[2025-08-03T05:11:45.916+0000] {logging_mixin.py:188} INFO -  
+[2025-08-03T05:11:45.917+0000] {logging_mixin.py:188} INFO - Abort
+[2025-08-03T05:11:45.918+0000] {logging_mixin.py:188} INFO - ✅ Downloaded salinity: /opt/***/nc/salinity/rayong_1_salinity.nc
+[2025-08-03T05:11:45.919+0000] {deprecated_options.py:61} WARNING - 'force_download' has been deprecated.
+[2025-08-03T05:11:46.628+0000] {credentials_utils.py:181} INFO - Downloading Copernicus Marine data requires a Copernicus Marine username and password, sign up for free at: https://data.marine.copernicus.eu/register
+[2025-08-03T05:11:46.630+0000] {logging_mixin.py:188} INFO - Copernicus Marine username:
+[2025-08-03T05:11:46.631+0000] {logging_mixin.py:188} INFO -  
+[2025-08-03T05:11:46.632+0000] {logging_mixin.py:188} INFO - Abort
+[2025-08-03T05:11:46.633+0000] {logging_mixin.py:188} INFO - ✅ Downloaded salinity: /opt/***/nc/salinity/rayong_2_salinity.nc
+[2025-08-03T05:11:46.635+0000] {deprecated_options.py:61} WARNING - 'force_download' has been deprecated.
+[2025-08-03T05:11:47.357+0000] {credentials_utils.py:181} INFO - Downloading Copernicus Marine data requires a Copernicus Marine username and password, sign up for free at: https://data.marine.copernicus.eu/register
+[2025-08-03T05:11:47.363+0000] {logging_mixin.py:188} INFO - Copernicus Marine username:
+[2025-08-03T05:11:47.365+0000] {logging_mixin.py:188} INFO -  
+[2025-08-03T05:11:47.367+0000] {logging_mixin.py:188} INFO - Abort
+[2025-08-03T05:11:47.368+0000] {logging_mixin.py:188} INFO - ✅ Downloaded salinity: /opt/***/nc/salinity/chanthaburi_1_salinity.nc
+[2025-08-03T05:11:47.370+0000] {deprecated_options.py:61} WARNING - 'force_download' has been deprecated.
+[2025-08-03T05:11:48.116+0000] {credentials_utils.py:181} INFO - Downloading Copernicus Marine data requires a Copernicus Marine username and password, sign up for free at: https://data.marine.copernicus.eu/register
+[2025-08-03T05:11:48.118+0000] {logging_mixin.py:188} INFO - Copernicus Marine username:
+[2025-08-03T05:11:48.119+0000] {logging_mixin.py:188} INFO -  
+[2025-08-03T05:11:48.121+0000] {logging_mixin.py:188} INFO - Abort
+[2025-08-03T05:11:48.122+0000] {logging_mixin.py:188} INFO - ✅ Downloaded salinity: /opt/***/nc/salinity/trat_1_salinity.nc
+[2025-08-03T05:11:48.124+0000] {python.py:201} INFO - Done. Returned value was: None
+[2025-08-03T05:11:48.150+0000] {taskinstance.py:1138} INFO - Marking task as SUCCESS. dag_id=marine_data_etl_dag, task_id=so_etl.download_so, execution_date=20250803T051024, start_date=20250803T051144, end_date=20250803T051148
+[2025-08-03T05:11:48.224+0000] {local_task_job_runner.py:234} INFO - Task exited with return code 0
+[2025-08-03T05:11:48.297+0000] {taskinstance.py:3280} INFO - 1 downstream tasks scheduled from follow-on schedule check

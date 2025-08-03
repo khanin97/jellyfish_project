@@ -1,31 +1,12 @@
-# Ignore logs, DB, temp files, and datasets
-airflow/logs/
-airflow/db/
-airflow/nc/
-airflow/csv/
-*.duckdb
+# ✅ แบบถูกต้อง: ไม่ลบโฟลเดอร์ แต่ลบเฉพาะไฟล์ภายใน
+airflow/logs/*
+!airflow/logs/.gitkeep
 
-# Python artifacts
-__pycache__/
-*.pyc
-*.pid
-*.swp
-*.log
+airflow/nc/*
+!airflow/nc/.gitkeep
 
-# Docker artifacts
-.docker/
-.docker-compose*
+airflow/csv/*
+!airflow/csv/.gitkeep
 
-# Airflow environment & override
-.env
-.env.*
-docker-compose.override.yml
-
-# Jupyter notebooks checkpoint
-.ipynb_checkpoints/
-
-# Jenkins temp scripts
-*.bat~
-*.sh~
-*.tmp
-*.bak
+airflow/db/*
+!airflow/db/.gitkeep

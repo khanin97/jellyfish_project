@@ -1,0 +1,39 @@
+[2025-08-03T06:26:11.381+0000] {taskinstance.py:1956} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: marine_data_etl_dag.sst_etl.download_sst manual__2025-08-03T06:15:57+00:00 [queued]>
+[2025-08-03T06:26:11.395+0000] {taskinstance.py:1956} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: marine_data_etl_dag.sst_etl.download_sst manual__2025-08-03T06:15:57+00:00 [queued]>
+[2025-08-03T06:26:11.396+0000] {taskinstance.py:2170} INFO - Starting attempt 1 of 1
+[2025-08-03T06:26:11.416+0000] {taskinstance.py:2191} INFO - Executing <Task(PythonOperator): sst_etl.download_sst> on 2025-08-03 06:15:57+00:00
+[2025-08-03T06:26:11.426+0000] {standard_task_runner.py:60} INFO - Started process 174 to run task
+[2025-08-03T06:26:11.433+0000] {standard_task_runner.py:87} INFO - Running: ['***', 'tasks', 'run', 'marine_data_etl_dag', 'sst_etl.download_sst', 'manual__2025-08-03T06:15:57+00:00', '--job-id', '231', '--raw', '--subdir', 'DAGS_FOLDER/marine_data_etl_dag.py', '--cfg-path', '/tmp/tmpk37m297t']
+[2025-08-03T06:26:11.438+0000] {standard_task_runner.py:88} INFO - Job 231: Subtask sst_etl.download_sst
+[2025-08-03T06:26:11.533+0000] {task_command.py:423} INFO - Running <TaskInstance: marine_data_etl_dag.sst_etl.download_sst manual__2025-08-03T06:15:57+00:00 [running]> on host e2f3b0101b9e
+[2025-08-03T06:26:11.850+0000] {taskinstance.py:2480} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='marine_data_etl_dag' AIRFLOW_CTX_TASK_ID='sst_etl.download_sst' AIRFLOW_CTX_EXECUTION_DATE='2025-08-03T06:15:57+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2025-08-03T06:15:57+00:00'
+[2025-08-03T06:26:11.857+0000] {deprecated_options.py:61} WARNING - 'force_download' has been deprecated.
+[2025-08-03T06:26:15.158+0000] {taskinstance.py:2698} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.10/site-packages/airflow/models/taskinstance.py", line 433, in _execute_task
+    result = execute_callable(context=context, **execute_callable_kwargs)
+  File "/home/airflow/.local/lib/python3.10/site-packages/airflow/operators/python.py", line 199, in execute
+    return_value = self.execute_callable()
+  File "/home/airflow/.local/lib/python3.10/site-packages/airflow/operators/python.py", line 216, in execute_callable
+    return self.python_callable(*self.op_args, **self.op_kwargs)
+  File "/opt/airflow/dags/etl/download_sst.py", line 24, in download_sst
+    subset(
+  File "/home/airflow/.local/lib/python3.10/site-packages/copernicusmarine/core_functions/deprecated_options.py", line 78, in wrapper
+    return f(*args, **kwargs)
+  File "/home/airflow/.local/lib/python3.10/site-packages/copernicusmarine/python_interface/exception_handler.py", line 17, in wrapper
+    raise exception
+  File "/home/airflow/.local/lib/python3.10/site-packages/copernicusmarine/python_interface/exception_handler.py", line 13, in wrapper
+    return function(*args, **kwargs)
+  File "/home/airflow/.local/lib/python3.10/site-packages/copernicusmarine/python_interface/subset.py", line 195, in subset
+    return subset_function(
+  File "/home/airflow/.local/lib/python3.10/site-packages/copernicusmarine/core_functions/subset.py", line 144, in subset_function
+    retrieval_service: RetrievalService = get_retrieval_service(
+  File "/home/airflow/.local/lib/python3.10/site-packages/copernicusmarine/core_functions/services_utils.py", line 221, in get_retrieval_service
+    dataset_metadata = get_dataset_metadata(
+  File "/home/airflow/.local/lib/python3.10/site-packages/copernicusmarine/catalogue_parser/catalogue_parser.py", line 114, in get_dataset_metadata
+    raise DatasetNotFound(dataset_id)
+copernicusmarine.catalogue_parser.models.DatasetNotFound: cmems_mod_glo_phy-ssh_anfc_0.083deg_P1D-m Please check that the dataset exists and the input datasetID is correct.
+[2025-08-03T06:26:15.190+0000] {taskinstance.py:1138} INFO - Marking task as FAILED. dag_id=marine_data_etl_dag, task_id=sst_etl.download_sst, execution_date=20250803T061557, start_date=20250803T062611, end_date=20250803T062615
+[2025-08-03T06:26:15.229+0000] {standard_task_runner.py:107} ERROR - Failed to execute job 231 for task sst_etl.download_sst (cmems_mod_glo_phy-ssh_anfc_0.083deg_P1D-m Please check that the dataset exists and the input datasetID is correct.; 174)
+[2025-08-03T06:26:15.291+0000] {local_task_job_runner.py:234} INFO - Task exited with return code 1
+[2025-08-03T06:26:15.354+0000] {taskinstance.py:3280} INFO - 0 downstream tasks scheduled from follow-on schedule check

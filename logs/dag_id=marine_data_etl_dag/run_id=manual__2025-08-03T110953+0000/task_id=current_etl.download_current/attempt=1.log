@@ -1,0 +1,181 @@
+[2025-08-03T11:15:37.035+0000] {taskinstance.py:1956} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: marine_data_etl_dag.current_etl.download_current manual__2025-08-03T11:09:53+00:00 [queued]>
+[2025-08-03T11:15:37.048+0000] {taskinstance.py:1956} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: marine_data_etl_dag.current_etl.download_current manual__2025-08-03T11:09:53+00:00 [queued]>
+[2025-08-03T11:15:37.049+0000] {taskinstance.py:2170} INFO - Starting attempt 1 of 1
+[2025-08-03T11:15:37.069+0000] {taskinstance.py:2191} INFO - Executing <Task(PythonOperator): current_etl.download_current> on 2025-08-03 11:09:53+00:00
+[2025-08-03T11:15:37.075+0000] {standard_task_runner.py:60} INFO - Started process 131 to run task
+[2025-08-03T11:15:37.080+0000] {standard_task_runner.py:87} INFO - Running: ['***', 'tasks', 'run', 'marine_data_etl_dag', 'current_etl.download_current', 'manual__2025-08-03T11:09:53+00:00', '--job-id', '261', '--raw', '--subdir', 'DAGS_FOLDER/marine_data_etl_dag.py', '--cfg-path', '/tmp/tmpse09h0pt']
+[2025-08-03T11:15:37.085+0000] {standard_task_runner.py:88} INFO - Job 261: Subtask current_etl.download_current
+[2025-08-03T11:15:37.156+0000] {task_command.py:423} INFO - Running <TaskInstance: marine_data_etl_dag.current_etl.download_current manual__2025-08-03T11:09:53+00:00 [running]> on host fce0ae18e39f
+[2025-08-03T11:15:37.460+0000] {taskinstance.py:2480} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='marine_data_etl_dag' AIRFLOW_CTX_TASK_ID='current_etl.download_current' AIRFLOW_CTX_EXECUTION_DATE='2025-08-03T11:09:53+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2025-08-03T11:09:53+00:00'
+[2025-08-03T11:15:37.465+0000] {deprecated_options.py:61} WARNING - 'force_download' has been deprecated.
+[2025-08-03T11:15:40.957+0000] {services_utils.py:262} INFO - Selected dataset version: "202406"
+[2025-08-03T11:15:40.959+0000] {services_utils.py:286} INFO - Selected dataset part: "default"
+[2025-08-03T11:15:45.249+0000] {download_zarr.py:169} INFO - Starting download. Please wait...
+[2025-08-03T11:15:45.609+0000] {logging_mixin.py:188} WARNING -   0%|          | 0/222 [00:00<?, ?it/s]
+[2025-08-03T11:15:48.218+0000] {logging_mixin.py:188} WARNING -   0%|          | 1/222 [00:02<09:36,  2.61s/it]
+[2025-08-03T11:15:50.422+0000] {logging_mixin.py:188} WARNING -   4%|3         | 8/222 [00:04<01:51,  1.91it/s]
+[2025-08-03T11:15:51.896+0000] {logging_mixin.py:188} WARNING -   5%|4         | 11/222 [00:06<01:48,  1.95it/s]
+[2025-08-03T11:15:52.676+0000] {logging_mixin.py:188} WARNING -  10%|#         | 23/222 [00:07<00:42,  4.72it/s]
+[2025-08-03T11:15:57.101+0000] {logging_mixin.py:188} WARNING -  14%|#3        | 30/222 [00:11<01:09,  2.76it/s]
+[2025-08-03T11:15:57.595+0000] {logging_mixin.py:188} WARNING -  17%|#6        | 37/222 [00:11<00:48,  3.79it/s]
+[2025-08-03T11:15:58.159+0000] {logging_mixin.py:188} WARNING -  21%|##        | 46/222 [00:12<00:32,  5.36it/s]
+[2025-08-03T11:16:02.450+0000] {logging_mixin.py:188} WARNING -  23%|##3       | 52/222 [00:16<00:55,  3.05it/s]
+[2025-08-03T11:16:02.729+0000] {logging_mixin.py:188} WARNING -  27%|##7       | 61/222 [00:17<00:35,  4.55it/s]
+[2025-08-03T11:16:03.746+0000] {logging_mixin.py:188} WARNING -  31%|###       | 68/222 [00:18<00:30,  5.04it/s]
+[2025-08-03T11:16:07.640+0000] {logging_mixin.py:188} WARNING -  33%|###3      | 74/222 [00:22<00:46,  3.17it/s]
+[2025-08-03T11:16:07.933+0000] {logging_mixin.py:188} WARNING -  37%|###7      | 83/222 [00:22<00:29,  4.67it/s]
+[2025-08-03T11:16:08.636+0000] {logging_mixin.py:188} WARNING -  41%|####      | 90/222 [00:23<00:24,  5.50it/s]
+[2025-08-03T11:16:12.070+0000] {logging_mixin.py:188} WARNING -  43%|####3     | 96/222 [00:26<00:35,  3.54it/s]
+[2025-08-03T11:16:15.426+0000] {logging_mixin.py:188} WARNING -  46%|####6     | 103/222 [00:29<00:40,  2.92it/s]
+[2025-08-03T11:16:16.372+0000] {logging_mixin.py:188} WARNING -  55%|#####4    | 121/222 [00:30<00:19,  5.26it/s]
+[2025-08-03T11:16:17.037+0000] {logging_mixin.py:188} WARNING -  58%|#####7    | 128/222 [00:31<00:15,  5.93it/s]
+[2025-08-03T11:16:20.339+0000] {logging_mixin.py:188} WARNING -  60%|######    | 134/222 [00:34<00:22,  3.98it/s]
+[2025-08-03T11:16:22.870+0000] {logging_mixin.py:188} WARNING -  64%|######3   | 141/222 [00:37<00:22,  3.56it/s]
+[2025-08-03T11:16:24.708+0000] {logging_mixin.py:188} WARNING -  65%|######4   | 144/222 [00:39<00:25,  3.06it/s]
+[2025-08-03T11:16:26.213+0000] {logging_mixin.py:188} WARNING -  68%|######8   | 151/222 [00:40<00:20,  3.43it/s]
+[2025-08-03T11:16:27.190+0000] {logging_mixin.py:188} WARNING -  73%|#######3  | 163/222 [00:41<00:11,  5.01it/s]
+[2025-08-03T11:16:29.295+0000] {logging_mixin.py:188} WARNING -  77%|#######7  | 172/222 [00:43<00:10,  4.75it/s]
+[2025-08-03T11:16:30.636+0000] {logging_mixin.py:188} WARNING -  80%|########  | 178/222 [00:45<00:09,  4.68it/s]
+[2025-08-03T11:16:33.298+0000] {logging_mixin.py:188} WARNING -  83%|########3 | 185/222 [00:47<00:09,  3.84it/s]
+[2025-08-03T11:16:34.941+0000] {logging_mixin.py:188} WARNING -  85%|########4 | 188/222 [00:49<00:10,  3.31it/s]
+[2025-08-03T11:16:35.134+0000] {logging_mixin.py:188} WARNING -  88%|########7 | 195/222 [00:49<00:05,  4.71it/s]
+[2025-08-03T11:16:38.740+0000] {logging_mixin.py:188} WARNING -  93%|#########3| 207/222 [00:53<00:03,  3.98it/s]
+[2025-08-03T11:16:39.250+0000] {logging_mixin.py:188} WARNING -  97%|#########7| 216/222 [00:53<00:01,  5.30it/s]
+[2025-08-03T11:16:39.264+0000] {logging_mixin.py:188} WARNING - 100%|##########| 222/222 [00:53<00:00,  4.14it/s]
+[2025-08-03T11:16:39.281+0000] {download_zarr.py:185} INFO - Successfully downloaded to /opt/***/nc/current/rayong_1_current.nc
+[2025-08-03T11:16:39.285+0000] {logging_mixin.py:188} INFO - ✅ Downloaded current: /opt/***/nc/current/rayong_1_current.nc
+[2025-08-03T11:16:39.287+0000] {deprecated_options.py:61} WARNING - 'force_download' has been deprecated.
+[2025-08-03T11:16:42.837+0000] {services_utils.py:262} INFO - Selected dataset version: "202406"
+[2025-08-03T11:16:42.839+0000] {services_utils.py:286} INFO - Selected dataset part: "default"
+[2025-08-03T11:16:46.980+0000] {download_zarr.py:169} INFO - Starting download. Please wait...
+[2025-08-03T11:16:47.478+0000] {logging_mixin.py:188} WARNING -   0%|          | 0/222 [00:00<?, ?it/s]
+[2025-08-03T11:16:50.026+0000] {logging_mixin.py:188} WARNING -   0%|          | 1/222 [00:02<09:23,  2.55s/it]
+[2025-08-03T11:16:52.196+0000] {logging_mixin.py:188} WARNING -   4%|3         | 8/222 [00:04<01:49,  1.95it/s]
+[2025-08-03T11:16:53.652+0000] {logging_mixin.py:188} WARNING -   5%|4         | 11/222 [00:06<01:46,  1.99it/s]
+[2025-08-03T11:16:53.766+0000] {logging_mixin.py:188} WARNING -   8%|7         | 17/222 [00:06<00:53,  3.87it/s]
+[2025-08-03T11:16:54.811+0000] {logging_mixin.py:188} WARNING -  10%|#         | 23/222 [00:07<00:44,  4.48it/s]
+[2025-08-03T11:16:58.240+0000] {logging_mixin.py:188} WARNING -  14%|#3        | 30/222 [00:10<01:03,  3.00it/s]
+[2025-08-03T11:16:59.083+0000] {logging_mixin.py:188} WARNING -  15%|#4        | 33/222 [00:11<01:00,  3.10it/s]
+[2025-08-03T11:17:00.641+0000] {logging_mixin.py:188} WARNING -  18%|#8        | 40/222 [00:13<00:51,  3.54it/s]
+[2025-08-03T11:17:04.259+0000] {logging_mixin.py:188} WARNING -  23%|##3       | 52/222 [00:16<00:49,  3.43it/s]
+[2025-08-03T11:17:04.935+0000] {logging_mixin.py:188} WARNING -  27%|##7       | 61/222 [00:17<00:34,  4.61it/s]
+[2025-08-03T11:17:05.501+0000] {logging_mixin.py:188} WARNING -  30%|###       | 67/222 [00:18<00:28,  5.37it/s]
+[2025-08-03T11:17:09.358+0000] {logging_mixin.py:188} WARNING -  33%|###3      | 74/222 [00:21<00:43,  3.41it/s]
+[2025-08-03T11:17:09.749+0000] {logging_mixin.py:188} WARNING -  37%|###7      | 83/222 [00:22<00:28,  4.86it/s]
+[2025-08-03T11:17:10.232+0000] {logging_mixin.py:188} WARNING -  41%|####      | 90/222 [00:22<00:22,  5.97it/s]
+[2025-08-03T11:17:12.364+0000] {logging_mixin.py:188} WARNING -  43%|####3     | 96/222 [00:24<00:27,  4.64it/s]
+[2025-08-03T11:17:14.514+0000] {logging_mixin.py:188} WARNING -  46%|####6     | 103/222 [00:27<00:28,  4.12it/s]
+[2025-08-03T11:17:14.681+0000] {logging_mixin.py:188} WARNING -  50%|#####     | 112/222 [00:27<00:17,  6.12it/s]
+[2025-08-03T11:17:15.225+0000] {logging_mixin.py:188} WARNING -  55%|#####4    | 121/222 [00:27<00:13,  7.76it/s]
+[2025-08-03T11:17:15.661+0000] {logging_mixin.py:188} WARNING -  58%|#####7    | 128/222 [00:28<00:10,  9.03it/s]
+[2025-08-03T11:17:18.942+0000] {logging_mixin.py:188} WARNING -  60%|######    | 134/222 [00:31<00:19,  4.55it/s]
+[2025-08-03T11:17:21.193+0000] {logging_mixin.py:188} WARNING -  64%|######3   | 141/222 [00:33<00:20,  4.01it/s]
+[2025-08-03T11:17:23.131+0000] {logging_mixin.py:188} WARNING -  65%|######4   | 144/222 [00:35<00:24,  3.23it/s]
+[2025-08-03T11:17:24.289+0000] {logging_mixin.py:188} WARNING -  68%|######8   | 151/222 [00:36<00:18,  3.83it/s]
+[2025-08-03T11:17:25.082+0000] {logging_mixin.py:188} WARNING -  73%|#######3  | 163/222 [00:37<00:10,  5.78it/s]
+[2025-08-03T11:17:27.108+0000] {logging_mixin.py:188} WARNING -  77%|#######7  | 172/222 [00:39<00:09,  5.26it/s]
+[2025-08-03T11:17:28.543+0000] {logging_mixin.py:188} WARNING -  80%|########  | 178/222 [00:41<00:08,  4.96it/s]
+[2025-08-03T11:17:30.891+0000] {logging_mixin.py:188} WARNING -  83%|########3 | 185/222 [00:43<00:08,  4.17it/s]
+[2025-08-03T11:17:32.841+0000] {logging_mixin.py:188} WARNING -  85%|########4 | 188/222 [00:45<00:10,  3.33it/s]
+[2025-08-03T11:17:32.951+0000] {logging_mixin.py:188} WARNING -  92%|#########2| 205/222 [00:45<00:02,  7.13it/s]
+[2025-08-03T11:17:36.432+0000] {logging_mixin.py:188} WARNING -  95%|#########4| 210/222 [00:48<00:02,  4.10it/s]
+[2025-08-03T11:17:36.746+0000] {logging_mixin.py:188} WARNING -  97%|#########7| 216/222 [00:49<00:01,  5.07it/s]
+[2025-08-03T11:17:36.762+0000] {logging_mixin.py:188} WARNING - 100%|##########| 222/222 [00:49<00:00,  4.50it/s]
+[2025-08-03T11:17:36.800+0000] {download_zarr.py:185} INFO - Successfully downloaded to /opt/***/nc/current/rayong_2_current.nc
+[2025-08-03T11:17:36.803+0000] {logging_mixin.py:188} INFO - ✅ Downloaded current: /opt/***/nc/current/rayong_2_current.nc
+[2025-08-03T11:17:36.805+0000] {deprecated_options.py:61} WARNING - 'force_download' has been deprecated.
+[2025-08-03T11:17:40.659+0000] {services_utils.py:262} INFO - Selected dataset version: "202406"
+[2025-08-03T11:17:40.660+0000] {services_utils.py:286} INFO - Selected dataset part: "default"
+[2025-08-03T11:17:44.533+0000] {download_zarr.py:169} INFO - Starting download. Please wait...
+[2025-08-03T11:17:44.817+0000] {logging_mixin.py:188} WARNING -   0%|          | 0/222 [00:00<?, ?it/s]
+[2025-08-03T11:17:47.440+0000] {logging_mixin.py:188} WARNING -   0%|          | 1/222 [00:02<09:39,  2.62s/it]
+[2025-08-03T11:17:49.348+0000] {logging_mixin.py:188} WARNING -   4%|3         | 8/222 [00:04<01:44,  2.06it/s]
+[2025-08-03T11:17:50.581+0000] {logging_mixin.py:188} WARNING -   5%|4         | 11/222 [00:05<01:36,  2.18it/s]
+[2025-08-03T11:17:51.600+0000] {logging_mixin.py:188} WARNING -  10%|#         | 23/222 [00:06<00:41,  4.81it/s]
+[2025-08-03T11:17:55.987+0000] {logging_mixin.py:188} WARNING -  14%|#3        | 30/222 [00:11<01:08,  2.79it/s]
+[2025-08-03T11:17:56.348+0000] {logging_mixin.py:188} WARNING -  17%|#6        | 37/222 [00:11<00:47,  3.93it/s]
+[2025-08-03T11:17:56.516+0000] {logging_mixin.py:188} WARNING -  23%|##2       | 50/222 [00:11<00:24,  7.14it/s]
+[2025-08-03T11:18:00.142+0000] {logging_mixin.py:188} WARNING -  24%|##4       | 54/222 [00:15<00:45,  3.68it/s]
+[2025-08-03T11:18:00.762+0000] {logging_mixin.py:188} WARNING -  27%|##7       | 61/222 [00:15<00:34,  4.61it/s]
+[2025-08-03T11:18:01.692+0000] {logging_mixin.py:188} WARNING -  31%|###       | 68/222 [00:16<00:29,  5.22it/s]
+[2025-08-03T11:18:05.773+0000] {logging_mixin.py:188} WARNING -  33%|###3      | 74/222 [00:20<00:47,  3.10it/s]
+[2025-08-03T11:18:06.189+0000] {logging_mixin.py:188} WARNING -  37%|###7      | 83/222 [00:21<00:30,  4.51it/s]
+[2025-08-03T11:18:08.406+0000] {logging_mixin.py:188} WARNING -  43%|####3     | 96/222 [00:23<00:25,  5.01it/s]
+[2025-08-03T11:18:08.574+0000] {logging_mixin.py:188} WARNING -  45%|####5     | 101/222 [00:23<00:20,  5.96it/s]
+[2025-08-03T11:18:10.266+0000] {logging_mixin.py:188} WARNING -  46%|####6     | 103/222 [00:25<00:27,  4.26it/s]
+[2025-08-03T11:18:11.001+0000] {logging_mixin.py:188} WARNING -  50%|#####     | 112/222 [00:26<00:19,  5.70it/s]
+[2025-08-03T11:18:12.197+0000] {logging_mixin.py:188} WARNING -  55%|#####4    | 121/222 [00:27<00:16,  6.24it/s]
+[2025-08-03T11:18:15.798+0000] {logging_mixin.py:188} WARNING -  60%|######    | 134/222 [00:30<00:18,  4.77it/s]
+[2025-08-03T11:18:15.937+0000] {logging_mixin.py:188} WARNING -  63%|######2   | 139/222 [00:31<00:14,  5.70it/s]
+[2025-08-03T11:18:18.286+0000] {logging_mixin.py:188} WARNING -  64%|######3   | 141/222 [00:33<00:22,  3.67it/s]
+[2025-08-03T11:18:20.093+0000] {logging_mixin.py:188} WARNING -  65%|######4   | 144/222 [00:35<00:25,  3.03it/s]
+[2025-08-03T11:18:20.210+0000] {logging_mixin.py:188} WARNING -  70%|#######   | 156/222 [00:35<00:11,  5.86it/s]
+[2025-08-03T11:18:21.767+0000] {logging_mixin.py:188} WARNING -  73%|#######3  | 163/222 [00:36<00:10,  5.38it/s]
+[2025-08-03T11:18:23.742+0000] {logging_mixin.py:188} WARNING -  77%|#######7  | 172/222 [00:38<00:09,  5.06it/s]
+[2025-08-03T11:18:23.844+0000] {logging_mixin.py:188} WARNING -  79%|#######9  | 176/222 [00:39<00:07,  6.01it/s]
+[2025-08-03T11:18:24.546+0000] {logging_mixin.py:188} WARNING -  81%|########  | 179/222 [00:39<00:07,  5.64it/s]
+[2025-08-03T11:18:24.700+0000] {logging_mixin.py:188} WARNING -  82%|########2 | 183/222 [00:39<00:05,  6.92it/s]
+[2025-08-03T11:18:27.624+0000] {logging_mixin.py:188} WARNING -  84%|########3 | 186/222 [00:42<00:11,  3.20it/s]
+[2025-08-03T11:18:29.001+0000] {logging_mixin.py:188} WARNING -  85%|########4 | 188/222 [00:44<00:12,  2.68it/s]
+[2025-08-03T11:18:29.867+0000] {logging_mixin.py:188} WARNING -  88%|########7 | 195/222 [00:45<00:07,  3.82it/s]
+[2025-08-03T11:18:32.915+0000] {logging_mixin.py:188} WARNING -  93%|#########3| 207/222 [00:48<00:03,  3.88it/s]
+[2025-08-03T11:18:33.190+0000] {logging_mixin.py:188} WARNING -  97%|#########7| 216/222 [00:48<00:01,  5.68it/s]
+[2025-08-03T11:18:33.268+0000] {logging_mixin.py:188} WARNING - 100%|##########| 222/222 [00:48<00:00,  4.58it/s]
+[2025-08-03T11:18:33.329+0000] {download_zarr.py:185} INFO - Successfully downloaded to /opt/***/nc/current/chanthaburi_1_current.nc
+[2025-08-03T11:18:33.337+0000] {logging_mixin.py:188} INFO - ✅ Downloaded current: /opt/***/nc/current/chanthaburi_1_current.nc
+[2025-08-03T11:18:33.343+0000] {deprecated_options.py:61} WARNING - 'force_download' has been deprecated.
+[2025-08-03T11:18:36.885+0000] {services_utils.py:262} INFO - Selected dataset version: "202406"
+[2025-08-03T11:18:36.887+0000] {services_utils.py:286} INFO - Selected dataset part: "default"
+[2025-08-03T11:18:40.742+0000] {download_zarr.py:169} INFO - Starting download. Please wait...
+[2025-08-03T11:18:40.977+0000] {logging_mixin.py:188} WARNING -   0%|          | 0/222 [00:00<?, ?it/s]
+[2025-08-03T11:18:43.643+0000] {logging_mixin.py:188} WARNING -   0%|          | 1/222 [00:02<09:48,  2.67s/it]
+[2025-08-03T11:18:43.918+0000] {logging_mixin.py:188} WARNING -   3%|2         | 6/222 [00:02<01:21,  2.66it/s]
+[2025-08-03T11:18:45.659+0000] {logging_mixin.py:188} WARNING -   4%|3         | 8/222 [00:04<01:55,  1.85it/s]
+[2025-08-03T11:18:46.902+0000] {logging_mixin.py:188} WARNING -   5%|4         | 11/222 [00:05<01:42,  2.05it/s]
+[2025-08-03T11:18:47.015+0000] {logging_mixin.py:188} WARNING -   8%|7         | 17/222 [00:06<00:47,  4.29it/s]
+[2025-08-03T11:18:48.302+0000] {logging_mixin.py:188} WARNING -  10%|#         | 23/222 [00:07<00:44,  4.45it/s]
+[2025-08-03T11:18:51.888+0000] {logging_mixin.py:188} WARNING -  14%|#3        | 30/222 [00:10<01:06,  2.89it/s]
+[2025-08-03T11:18:52.514+0000] {logging_mixin.py:188} WARNING -  15%|#4        | 33/222 [00:11<01:00,  3.15it/s]
+[2025-08-03T11:18:52.732+0000] {logging_mixin.py:188} WARNING -  19%|#9        | 43/222 [00:11<00:30,  5.83it/s]
+[2025-08-03T11:18:52.846+0000] {logging_mixin.py:188} WARNING -  22%|##1       | 48/222 [00:11<00:23,  7.53it/s]
+[2025-08-03T11:18:53.033+0000] {logging_mixin.py:188} WARNING -  23%|##2       | 51/222 [00:12<00:20,  8.34it/s]
+[2025-08-03T11:18:56.478+0000] {logging_mixin.py:188} WARNING -  24%|##4       | 54/222 [00:15<00:55,  3.01it/s]
+[2025-08-03T11:18:57.200+0000] {logging_mixin.py:188} WARNING -  27%|##7       | 61/222 [00:16<00:38,  4.18it/s]
+[2025-08-03T11:18:57.669+0000] {logging_mixin.py:188} WARNING -  31%|###       | 68/222 [00:16<00:27,  5.69it/s]
+[2025-08-03T11:18:57.843+0000] {logging_mixin.py:188} WARNING -  32%|###2      | 72/222 [00:16<00:21,  6.89it/s]
+[2025-08-03T11:19:02.319+0000] {logging_mixin.py:188} WARNING -  33%|###3      | 74/222 [00:21<01:05,  2.26it/s]
+[2025-08-03T11:19:02.561+0000] {logging_mixin.py:188} WARNING -  36%|###6      | 81/222 [00:21<00:38,  3.67it/s]
+[2025-08-03T11:19:03.893+0000] {logging_mixin.py:188} WARNING -  38%|###7      | 84/222 [00:22<00:42,  3.25it/s]
+[2025-08-03T11:19:03.993+0000] {logging_mixin.py:188} WARNING -  42%|####1     | 93/222 [00:23<00:21,  5.89it/s]
+[2025-08-03T11:19:06.208+0000] {logging_mixin.py:188} WARNING -  44%|####3     | 97/222 [00:25<00:32,  3.89it/s]
+[2025-08-03T11:19:06.446+0000] {logging_mixin.py:188} WARNING -  45%|####5     | 101/222 [00:25<00:25,  4.79it/s]
+[2025-08-03T11:19:06.672+0000] {logging_mixin.py:188} WARNING -  49%|####8     | 108/222 [00:25<00:16,  7.06it/s]
+[2025-08-03T11:19:07.341+0000] {logging_mixin.py:188} WARNING -  50%|#####     | 112/222 [00:26<00:16,  6.77it/s]
+[2025-08-03T11:19:08.525+0000] {logging_mixin.py:188} WARNING -  55%|#####4    | 121/222 [00:27<00:14,  7.11it/s]
+[2025-08-03T11:19:08.640+0000] {logging_mixin.py:188} WARNING -  56%|#####6    | 125/222 [00:27<00:11,  8.58it/s]
+[2025-08-03T11:19:09.176+0000] {logging_mixin.py:188} WARNING -  58%|#####7    | 128/222 [00:28<00:12,  7.80it/s]
+[2025-08-03T11:19:11.914+0000] {logging_mixin.py:188} WARNING -  60%|######    | 134/222 [00:30<00:21,  4.12it/s]
+[2025-08-03T11:19:12.046+0000] {logging_mixin.py:188} WARNING -  63%|######2   | 139/222 [00:31<00:14,  5.58it/s]
+[2025-08-03T11:19:16.357+0000] {logging_mixin.py:188} WARNING -  64%|######3   | 142/222 [00:35<00:34,  2.31it/s]
+[2025-08-03T11:19:16.544+0000] {logging_mixin.py:188} WARNING -  66%|######5   | 146/222 [00:35<00:24,  3.07it/s]
+[2025-08-03T11:19:16.776+0000] {logging_mixin.py:188} WARNING -  70%|######9   | 155/222 [00:35<00:12,  5.43it/s]
+[2025-08-03T11:19:17.789+0000] {logging_mixin.py:188} WARNING -  71%|#######1  | 158/222 [00:36<00:13,  4.71it/s]
+[2025-08-03T11:19:18.796+0000] {logging_mixin.py:188} WARNING -  73%|#######3  | 163/222 [00:37<00:12,  4.79it/s]
+[2025-08-03T11:19:18.912+0000] {logging_mixin.py:188} WARNING -  76%|#######5  | 168/222 [00:37<00:08,  6.54it/s]
+[2025-08-03T11:19:22.305+0000] {logging_mixin.py:188} WARNING -  77%|#######7  | 172/222 [00:41<00:16,  3.02it/s]
+[2025-08-03T11:19:22.562+0000] {logging_mixin.py:188} WARNING -  81%|########  | 179/222 [00:41<00:09,  4.62it/s]
+[2025-08-03T11:19:22.818+0000] {logging_mixin.py:188} WARNING -  82%|########2 | 183/222 [00:41<00:06,  5.57it/s]
+[2025-08-03T11:19:25.074+0000] {logging_mixin.py:188} WARNING -  83%|########3 | 185/222 [00:44<00:11,  3.13it/s]
+[2025-08-03T11:19:26.598+0000] {logging_mixin.py:188} WARNING -  85%|########4 | 188/222 [00:45<00:12,  2.74it/s]
+[2025-08-03T11:19:26.801+0000] {logging_mixin.py:188} WARNING -  89%|########9 | 198/222 [00:45<00:04,  5.53it/s]
+[2025-08-03T11:19:27.427+0000] {logging_mixin.py:188} WARNING -  91%|######### | 201/222 [00:46<00:03,  5.37it/s]
+[2025-08-03T11:19:33.201+0000] {logging_mixin.py:188} WARNING -  93%|#########3| 207/222 [00:52<00:06,  2.20it/s]
+[2025-08-03T11:19:36.142+0000] {logging_mixin.py:188} WARNING -  95%|#########4| 210/222 [00:55<00:06,  1.79it/s]
+[2025-08-03T11:19:36.309+0000] {logging_mixin.py:188} WARNING -  99%|#########9| 220/222 [00:55<00:00,  3.38it/s]
+[2025-08-03T11:19:36.313+0000] {logging_mixin.py:188} WARNING - 100%|##########| 222/222 [00:55<00:00,  4.01it/s]
+[2025-08-03T11:19:36.333+0000] {download_zarr.py:185} INFO - Successfully downloaded to /opt/***/nc/current/trat_1_current.nc
+[2025-08-03T11:19:36.336+0000] {logging_mixin.py:188} INFO - ✅ Downloaded current: /opt/***/nc/current/trat_1_current.nc
+[2025-08-03T11:19:36.337+0000] {python.py:201} INFO - Done. Returned value was: None
+[2025-08-03T11:19:36.355+0000] {taskinstance.py:1138} INFO - Marking task as SUCCESS. dag_id=marine_data_etl_dag, task_id=current_etl.download_current, execution_date=20250803T110953, start_date=20250803T111537, end_date=20250803T111936
+[2025-08-03T11:19:36.415+0000] {local_task_job_runner.py:234} INFO - Task exited with return code 0
+[2025-08-03T11:19:36.666+0000] {taskinstance.py:3280} INFO - 1 downstream tasks scheduled from follow-on schedule check
