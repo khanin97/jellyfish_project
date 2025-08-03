@@ -16,7 +16,7 @@ def download_phytoplankton():
     start_date = "2022-06-01T00:00:00"
     end_date = datetime.today().strftime("%Y-%m-%dT00:00:00")
 
-    dataset_id = "cmems_mod_glo_bgc-plankton_anfc_0.25deg_P1D-m"
+    dataset_id = "cmems_mod_glo_bgc-pft_anfc_0.25deg_P1D-m"
     variable = "phyc"
 
     for province, bounds in provinces.items():

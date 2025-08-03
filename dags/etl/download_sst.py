@@ -16,8 +16,8 @@ def download_sst():
     start_date = "2022-06-01T00:00:00"
     end_date = datetime.today().strftime("%Y-%m-%dT00:00:00")
 
-    dataset_id = "cmems_mod_glo_phy-ssh_anfc_0.083deg_P1D-m"
-    variable = "sst"
+    dataset_id = "cmems_obs-sst_glo_phy_nrt_l4_P1D-m"
+    variable = "analysed_sst"
 
     for province, bounds in provinces.items():
         output_file = os.path.join(output_dir, f"{province}_sst.nc")
