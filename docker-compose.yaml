@@ -23,13 +23,7 @@ services:
       AIRFLOW__CORE__LOAD_EXAMPLES: "false"
     volumes:
       - ./airflow:/opt/airflow
-      - ./dags:/opt/airflow/dags
-      - ./logs:/opt/airflow/logs
-      - ./plugins:/opt/airflow/plugins
       - ./requirements.txt:/requirements.txt
-      - ./nc:/opt/airflow/nc
-      - ./csv:/opt/airflow/csv
-      - ./db:/opt/airflow/db
     ports:
       - "8181:8080"
     command: bash -c "pip install -r /requirements.txt && airflow webserver"
@@ -48,13 +42,7 @@ services:
       AIRFLOW__CORE__LOAD_EXAMPLES: "false"
     volumes:
       - ./airflow:/opt/airflow
-      - ./dags:/opt/airflow/dags
-      - ./logs:/opt/airflow/logs
-      - ./plugins:/opt/airflow/plugins
       - ./requirements.txt:/requirements.txt
-      - ./nc:/opt/airflow/nc
-      - ./csv:/opt/airflow/csv
-      - ./db:/opt/airflow/db
     command: bash -c "pip install -r /requirements.txt && airflow scheduler"
     networks:
       - airflow
@@ -70,12 +58,7 @@ services:
       AIRFLOW__CORE__LOAD_EXAMPLES: "false"
     volumes:
       - ./airflow:/opt/airflow
-      - ./dags:/opt/airflow/dags
-      - ./logs:/opt/airflow/logs
-      - ./plugins:/opt/airflow/plugins
-      - ./nc:/opt/airflow/nc
-      - ./csv:/opt/airflow/csv
-      - ./db:/opt/airflow/db
+      - ./requirements.txt:/requirements.txt
     entrypoint: >
       bash -c "airflow db migrate &&
                airflow users create --username admin --password admin --firstname admin --lastname admin --role Admin --email admin@example.com"

@@ -1,39 +1,31 @@
-# Git ignore rules
-# Ignore Airflow log files
-logs/
-
-# Ignore .env files (ถ้ามี credentials)
-.env
-.env.*
-
-# Ignore Airflow logs
-logs/
+# Ignore logs, DB, temp files, and datasets
 airflow/logs/
-
-# Ignore Airflow DB and DB folders
-db/
+airflow/db/
+airflow/nc/
+airflow/csv/
 *.duckdb
 
-# Ignore Docker-related
+# Python artifacts
 __pycache__/
 *.pyc
 *.pid
 *.swp
 *.log
+
+# Docker artifacts
 .docker/
 .docker-compose*
 
-# Ignore Jupyter notebooks checkpoint
+# Airflow environment & override
+.env
+.env.*
+docker-compose.override.yml
+
+# Jupyter notebooks checkpoint
 .ipynb_checkpoints/
 
-# Ignore Jenkins temporary scripts
+# Jenkins temp scripts
 *.bat~
 *.sh~
 *.tmp
 *.bak
-
-# Ignore personal credentials override
-docker-compose.override.yml
-
-# Ignore NetCDF (.nc) data files
-airflow/nc/
