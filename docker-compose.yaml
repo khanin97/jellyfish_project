@@ -17,8 +17,8 @@ services:
     depends_on:
       - postgres
     environment:
-      CMEMS_USERNAME: ${CMEMS_USERNAME}
-      CMEMS_PASSWORD: ${CMEMS_PASSWORD}
+      CMEMS_USERNAME: khanin.cht@gmail.com
+      CMEMS_PASSWORD: your_actual_password_here
       AIRFLOW__DATABASE__SQL_ALCHEMY_CONN: postgresql+psycopg2://airflow:airflow@postgres/airflow
       AIRFLOW__CORE__LOAD_EXAMPLES: "false"
     volumes:
@@ -30,7 +30,7 @@ services:
       - ./csv:/opt/airflow/csv
       - ./db:/opt/airflow/db
     ports:
-      - "8181:8080"  
+      - "8181:8080"
     command: bash -c "pip install -r /requirements.txt && airflow webserver"
     networks:
       - airflow
@@ -41,8 +41,8 @@ services:
     depends_on:
       - webserver
     environment:
-      CMEMS_USERNAME: ${CMEMS_USERNAME}
-      CMEMS_PASSWORD: ${CMEMS_PASSWORD}
+      CMEMS_USERNAME: khanin.cht@gmail.com
+      CMEMS_PASSWORD: your_actual_password_here
       AIRFLOW__DATABASE__SQL_ALCHEMY_CONN: postgresql+psycopg2://airflow:airflow@postgres/airflow
       AIRFLOW__CORE__LOAD_EXAMPLES: "false"
     volumes:
@@ -62,8 +62,8 @@ services:
     depends_on:
       - postgres
     environment:
-      CMEMS_USERNAME: ${CMEMS_USERNAME}
-      CMEMS_PASSWORD: ${CMEMS_PASSWORD}
+      CMEMS_USERNAME: khanin.cht@gmail.com
+      CMEMS_PASSWORD: Nincht9077
       AIRFLOW__DATABASE__SQL_ALCHEMY_CONN: postgresql+psycopg2://airflow:airflow@postgres/airflow
       AIRFLOW__CORE__LOAD_EXAMPLES: "false"
     volumes:
