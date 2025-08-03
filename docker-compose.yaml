@@ -18,7 +18,7 @@ services:
       - postgres
     environment:
       CMEMS_USERNAME: khanin.cht@gmail.com
-      CMEMS_PASSWORD: your_actual_password_here
+      CMEMS_PASSWORD: Nincht9077
       AIRFLOW__DATABASE__SQL_ALCHEMY_CONN: postgresql+psycopg2://airflow:airflow@postgres/airflow
       AIRFLOW__CORE__LOAD_EXAMPLES: "false"
     volumes:
@@ -42,7 +42,7 @@ services:
       - webserver
     environment:
       CMEMS_USERNAME: khanin.cht@gmail.com
-      CMEMS_PASSWORD: your_actual_password_here
+      CMEMS_PASSWORD: Nincht9077
       AIRFLOW__DATABASE__SQL_ALCHEMY_CONN: postgresql+psycopg2://airflow:airflow@postgres/airflow
       AIRFLOW__CORE__LOAD_EXAMPLES: "false"
     volumes:
