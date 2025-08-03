@@ -1,12 +1,6 @@
-# ✅ แบบถูกต้อง: ไม่ลบโฟลเดอร์ แต่ลบเฉพาะไฟล์ภายใน
-airflow/logs/*
-!airflow/logs/.gitkeep
-
-airflow/nc/*
-!airflow/nc/.gitkeep
-
-airflow/csv/*
-!airflow/csv/.gitkeep
-
-airflow/db/*
-!airflow/db/.gitkeep
+# Ignore Airflow logs + data
+airflow/logs/
+airflow/nc/
+airflow/csv/
+airflow/db/
+*.duckdb

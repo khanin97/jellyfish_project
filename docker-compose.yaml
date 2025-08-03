@@ -22,12 +22,12 @@ services:
       AIRFLOW__DATABASE__SQL_ALCHEMY_CONN: postgresql+psycopg2://airflow:airflow@postgres/airflow
       AIRFLOW__CORE__LOAD_EXAMPLES: "false"
     volumes:
-      - ./airflow:/opt/airflow
-      - ./requirements.txt:/requirements.txt
-      - ./airflow/logs:/opt/airflow/logs
-      - ./airflow/nc:/opt/airflow/nc
-      - ./airflow/csv:/opt/airflow/csv
-      - ./airflow/db:/opt/airflow/db
+        - ./airflow:/opt/airflow
+        - ./airflow/logs:/opt/airflow/logs
+        - ./airflow/nc:/opt/airflow/nc
+        - ./airflow/csv:/opt/airflow/csv
+        - ./airflow/db:/opt/airflow/db
+        - ./requirements.txt:/requirements.txt
     ports:
       - "8181:8080"
     command: bash -c "pip install -r /requirements.txt && airflow webserver"
@@ -45,12 +45,12 @@ services:
       AIRFLOW__DATABASE__SQL_ALCHEMY_CONN: postgresql+psycopg2://airflow:airflow@postgres/airflow
       AIRFLOW__CORE__LOAD_EXAMPLES: "false"
     volumes:
-      - ./airflow:/opt/airflow
-      - ./requirements.txt:/requirements.txt
-      - ./airflow/logs:/opt/airflow/logs
-      - ./airflow/nc:/opt/airflow/nc
-      - ./airflow/csv:/opt/airflow/csv
-      - ./airflow/db:/opt/airflow/db
+        - ./airflow:/opt/airflow
+        - ./airflow/logs:/opt/airflow/logs
+        - ./airflow/nc:/opt/airflow/nc
+        - ./airflow/csv:/opt/airflow/csv
+        - ./airflow/db:/opt/airflow/db
+        - ./requirements.txt:/requirements.txt
     command: bash -c "pip install -r /requirements.txt && airflow scheduler"
     networks:
       - airflow
@@ -65,12 +65,12 @@ services:
       AIRFLOW__DATABASE__SQL_ALCHEMY_CONN: postgresql+psycopg2://airflow:airflow@postgres/airflow
       AIRFLOW__CORE__LOAD_EXAMPLES: "false"
     volumes:
-      - ./airflow:/opt/airflow
-      - ./requirements.txt:/requirements.txt
-      - ./airflow/logs:/opt/airflow/logs
-      - ./airflow/nc:/opt/airflow/nc
-      - ./airflow/csv:/opt/airflow/csv
-      - ./airflow/db:/opt/airflow/db
+        - ./airflow:/opt/airflow
+        - ./airflow/logs:/opt/airflow/logs
+        - ./airflow/nc:/opt/airflow/nc
+        - ./airflow/csv:/opt/airflow/csv
+        - ./airflow/db:/opt/airflow/db
+        - ./requirements.txt:/requirements.txt
     entrypoint: >
       bash -c "airflow db migrate &&
                airflow users create --username admin --password admin --firstname admin --lastname admin --role Admin --email admin@example.com"
