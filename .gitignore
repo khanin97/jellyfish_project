@@ -34,3 +34,6 @@ __pycache__/
 
 # Ignore personal credentials override
 docker-compose.override.yml
+
+# Ignore NetCDF (.nc) data files
+airflow/nc/

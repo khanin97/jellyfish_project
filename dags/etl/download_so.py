@@ -21,6 +21,8 @@ def download_salinity():
 
     for province, bounds in provinces.items():
         output_file = os.path.join(output_dir, f"{province}_salinity.nc")
+        if os.path.exists(output_file):
+            os.remove(output_file)
         subset(
             username=os.environ["CMEMS_USERNAME"],
             password=os.environ["CMEMS_PASSWORD"],

@@ -11,7 +11,7 @@ def load_current_csv_to_duckdb():
         if fname.endswith(".csv"):
             path = os.path.join(folder, fname)
             table_name = fname.replace(".csv", "")
-            con.execute(f"CREATE OR REPLACE TABLE {table_name} AS SELECT * FROM read_csv_auto('{path}');")
+            con.execute(f'CREATE OR REPLACE TABLE "{table_name}" AS SELECT * FROM read_csv_auto(\'{path}\');')
             print(f"✅ Loaded current to DuckDB: {table_name}")
 
     con.close()

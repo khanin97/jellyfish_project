@@ -27,6 +27,7 @@ services:
       - ./logs:/opt/airflow/logs
       - ./plugins:/opt/airflow/plugins
       - ./requirements.txt:/requirements.txt
+      - ./nc:/opt/airflow/nc
       - ./csv:/opt/airflow/csv
       - ./db:/opt/airflow/db
     ports:
@@ -51,6 +52,7 @@ services:
       - ./logs:/opt/airflow/logs
       - ./plugins:/opt/airflow/plugins
       - ./requirements.txt:/requirements.txt
+      - ./nc:/opt/airflow/nc
       - ./csv:/opt/airflow/csv
       - ./db:/opt/airflow/db
     command: bash -c "pip install -r /requirements.txt && airflow scheduler"
@@ -71,6 +73,7 @@ services:
       - ./dags:/opt/airflow/dags
       - ./logs:/opt/airflow/logs
       - ./plugins:/opt/airflow/plugins
+      - ./nc:/opt/airflow/nc
       - ./csv:/opt/airflow/csv
       - ./db:/opt/airflow/db
     entrypoint: >
