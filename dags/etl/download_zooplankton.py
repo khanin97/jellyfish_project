@@ -21,6 +21,8 @@ def download_zooplankton():
     for province, bounds in provinces.items():
         output_file = os.path.join(output_dir, f"{province}_zooplankton.nc")
         subset(
+            username=os.environ["CMEMS_USERNAME"],
+            password=os.environ["CMEMS_PASSWORD"],
             dataset_id=dataset_id,
             variables=[variable],
             minimum_longitude=bounds['lon'].start,
