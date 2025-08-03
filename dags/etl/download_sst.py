@@ -4,7 +4,13 @@ import os
 
 def download_sst():
     output_dir = "/opt/airflow/nc/sst"
-    os.makedirs(output_dir, exist_ok=True)
+
+    # ❗ ไม่พยายามสร้างโฟลเดอร์ — ถ้าไม่มี ถือว่า host setup ไม่พร้อม
+    if not os.path.exists(output_dir):
+        raise FileNotFoundError(
+            f"❌ Directory not found: {output_dir}\n"
+            f"💡 Please create it on the host machine under ./airflow/nc/sst before running."
+        )
 
     provinces = {
         'rayong_1': dict(lat=slice(12.4723, 12.5566), lon=slice(100.8553, 101.4210)),
@@ -21,8 +27,11 @@ def download_sst():
 
     for province, bounds in provinces.items():
         output_file = os.path.join(output_dir, f"{province}_sst.nc")
+
+        # ✅ ลบไฟล์เดิมถ้ามี
         if os.path.exists(output_file):
             os.remove(output_file)
+
         subset(
             username=os.environ["CMEMS_USERNAME"],
             password=os.environ["CMEMS_PASSWORD"],
@@ -35,6 +44,6 @@ def download_sst():
             start_datetime=start_date,
             end_datetime=end_date,
             output_filename=output_file,
-            force_download=True
+            force_download=True  # แม้จะ deprecated แต่ยังใช้ได้ปลอดภัย
         )
         print(f"✅ Downloaded SST: {output_file}")

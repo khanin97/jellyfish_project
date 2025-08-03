@@ -5,7 +5,12 @@ import pandas as pd
 def convert_current_nc_to_csv():
     input_folder = "/opt/airflow/nc/current"
     output_folder = "/opt/airflow/csv/current"
-    os.makedirs(output_folder, exist_ok=True)
+
+    # ❗ ตรวจว่าโฟลเดอร์ถูกเตรียมไว้แล้ว
+    if not os.path.exists(input_folder):
+        raise FileNotFoundError(f"❌ Missing input folder: {input_folder}")
+    if not os.path.exists(output_folder):
+        raise FileNotFoundError(f"❌ Missing output folder: {output_folder}")
 
     for fname in os.listdir(input_folder):
         if fname.endswith(".nc"):

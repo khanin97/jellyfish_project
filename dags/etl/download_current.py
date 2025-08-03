@@ -4,7 +4,13 @@ import os
 
 def download_current():
     output_dir = "/opt/airflow/nc/current"
-    os.makedirs(output_dir, exist_ok=True)
+
+    # ❗ ไม่พยายามสร้างโฟลเดอร์ — ถ้าไม่มี ถือว่า host setup ไม่พร้อม
+    if not os.path.exists(output_dir):
+        raise FileNotFoundError(
+            f"❌ Directory not found: {output_dir}\n"
+            f"💡 Please create it on the host machine under ./airflow/nc/phytoplankton before running."
+        )
 
     provinces = {
         'rayong_1': dict(lat=slice(12.4723, 12.5566), lon=slice(100.8553, 101.4210)),
