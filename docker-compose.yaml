@@ -27,7 +27,7 @@ services:
         - ./airflow/logs:/opt/airflow/logs
         - ./airflow/nc:/opt/airflow/nc
         - ./airflow/csv:/opt/airflow/csv
-        - ./airflow/db:/opt/airflow/db
+        - ./airflow/db:/opt/airflow/db:rw
         - ./requirements.txt:/requirements.txt
     ports:
       - "8181:8080"
@@ -51,7 +51,7 @@ services:
         - ./airflow/logs:/opt/airflow/logs
         - ./airflow/nc:/opt/airflow/nc
         - ./airflow/csv:/opt/airflow/csv
-        - ./airflow/db:/opt/airflow/db
+        - ./airflow/db:/opt/airflow/db:rw
         - ./requirements.txt:/requirements.txt
     command: bash -c "pip install -r /requirements.txt && airflow scheduler"
     networks:
@@ -72,7 +72,7 @@ services:
         - ./airflow/logs:/opt/airflow/logs
         - ./airflow/nc:/opt/airflow/nc
         - ./airflow/csv:/opt/airflow/csv
-        - ./airflow/db:/opt/airflow/db
+        - ./airflow/db:/opt/airflow/db:rw
         - ./requirements.txt:/requirements.txt
     entrypoint: >
       bash -c "airflow db migrate &&
